@@ -1,10 +1,8 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -15,11 +13,10 @@ const config: Config = {
         gnblueLight: "#2EB9C2",
         gntextblue: "#04F3D8",
         gnpink: "#D0376E",
-        gnpinkdark:"#6A1C38",
+        gnpinkdark: "#6A1C38",
         gndarkblue: "#19173C",
       },
     },
   },
   plugins: [],
 };
-export default config;
