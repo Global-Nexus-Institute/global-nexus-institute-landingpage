@@ -8,11 +8,13 @@ import { RootState } from "@/lib/store/store";
 
 export default function CourseContainer() {
   const { getCourses } = useCourses();
-  const { courses, loading } = useAppSelector((state: RootState) => state.courses);
+  const { courses, loading } = useAppSelector(
+    (state: RootState) => state.courses,
+  );
 
   useEffect(() => {
     getCourses();
-  }, []);
+  }, [getCourses]);
 
   return (
     <div className="bg-transparent p-3">

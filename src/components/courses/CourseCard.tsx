@@ -1,6 +1,6 @@
 import { Course } from "@/shared/types";
 import { EyeFilled } from "@ant-design/icons";
-import { Card } from "antd";
+import { Card, Image } from "antd";
 import React from "react";
 
 interface CourseCardProps {
@@ -10,11 +10,12 @@ interface CourseCardProps {
 
 const { Meta } = Card;
 
-export const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
+export const CourseCard: React.FC<CourseCardProps> = ({ course, key }) => {
   const actions = [
-    <div>{course.student_count} students</div>,
-    <div>{course.lesson_count} Lessons</div>,
+    <div key={`${key}-student`}>{course.student_count} students</div>,
+    <div key={`${key}-lesson`}>{course.lesson_count} Lessons</div>,
     <a
+      key={`${key}-slug`}
       href={`https://globalnexusinstitute.illumidesk.com/courses/${course.slug}`}
       target="_blank"
     >
@@ -26,10 +27,11 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
   ];
   return (
     <Card
+      key={course.uuid}
       hoverable
       style={{ width: "85%" }}
       cover={
-        <img
+        <Image
           alt={course.slug}
           src={course.main_image}
           width="100%"

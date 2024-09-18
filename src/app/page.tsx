@@ -1,11 +1,8 @@
 "use client";
 import TopMenu from "@/components/navigation/TopMenu";
-import Nav0 from "@/components/navigation/Nav0";
-import { Nav00DataSource } from "@/shared/helpers/data.source";
 import CourseContainer from "@/components/courses/CourseContainer";
 import { Button, Carousel, Image } from "antd";
 import { carouselData, teamMembers } from "@/shared/data";
-import { IntroContent } from "@/components/content/intro/IntroContent";
 import { IntroCard } from "@/components/content/intro/IntroCard";
 
 export default function Home() {
@@ -53,12 +50,13 @@ export default function Home() {
         </div>
         {/* Instructor section */}
         <div className="h-auto" id="team">
-          <h1 className="text-center text-gnblueLight text-4xl">
-            Our Instructors
-          </h1>
+          <h1 className="text-center text-gnblueLight text-4xl">Our Team</h1>
           <div className="md:grid md:grid-cols-3 gap-2 flex-col justify-center">
-            {teamMembers.map(({ names, profileImage, title }) => (
-              <div className="flex flex-col justify-center items-center bg-white rounded-md h-[200px] py-1">
+            {teamMembers.map(({ names, profileImage, title }, index) => (
+              <div
+                key={index}
+                className="flex flex-col justify-center items-center bg-white rounded-md h-[200px] py-1"
+              >
                 <div className="relative h-[40%] flex justify-center w-[99%] bg-gndarkblue rounded-md">
                   <Image
                     src={`${profileImage}`}

@@ -4,7 +4,6 @@ import {
   FormOutlined,
 } from "@ant-design/icons";
 import { Image, Layout, Menu, MenuProps } from "antd";
-import logo from "@/assets/images/logo.png";
 type MenuItem = Required<MenuProps>["items"][number];
 const items: MenuItem[] = [
   {
