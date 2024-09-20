@@ -4,6 +4,7 @@ import CourseContainer from "@/components/courses/CourseContainer";
 import { Button, Carousel, Image } from "antd";
 import { carouselData, teamMembers } from "@/shared/data";
 import { IntroCard } from "@/components/content/intro/IntroCard";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,10 +17,24 @@ export default function Home() {
           </div>
           <div className="flex gap-2 md:text-[2rem] text-white">
             <div>
-              <Button>Learn</Button>
+              <Button>
+                <Link
+                  href={"https://form.jotform.com/242266972261561"}
+                  target="_blank"
+                >
+                  Course Application
+                </Link>
+              </Button>
             </div>
             <div>
-              <Button>Apply</Button>
+              <Button>
+                <Link
+                  href={"https://form.jotform.com/242267742948569"}
+                  target="_blank"
+                >
+                  Volunteer Application
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
