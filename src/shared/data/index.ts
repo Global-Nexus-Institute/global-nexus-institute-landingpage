@@ -49,6 +49,19 @@ export const carouselData = [
 ];
 
 export const sampleFeaturedCourses: Course[] = [
+  {
+    uuid: "8f1b2e19-3d3f-4740-bb93-d1da991b6969",
+    name: "Data Science: Intermediaire",
+    slug: "data-science-intermediaire",
+    short_intro:
+      "Explore advanced topics in data science, including machine learning and statistical analysis, at our intermediate level campus.",
+    is_featured: false,
+    lesson_count: 21,
+    student_count: 11,
+    activity_count: 53,
+    main_image:
+      "https://prod-illumidesk-api-media-ueef29.s3.amazonaws.com/campuses/611abe06-3ac9-4a6f-81dc-f2abcb084623/2.jpg",
+  },
 
   {
     uuid: "7d158738-13c2-418f-a149-83035c30210c",
