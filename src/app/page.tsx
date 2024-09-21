@@ -98,7 +98,9 @@ export default function Home() {
         {/* Team section */}
         <section>
           <div className="flex flex-col items-center" id="team">
-            <h1 className="text-center text-gnblueLight text-4xl my-2">Our Team</h1>
+            <h1 className="text-center text-gnblueLight text-4xl my-2">
+              Our Team
+            </h1>
             <div className="md:grid md:grid-cols-3 gap-3 flex-col justify-center w-[90%]">
               {teamMembers.map(({ names, profileImage, title }, index) => (
                 <div
@@ -151,10 +153,10 @@ export default function Home() {
                 </div>
                 <div className="my-5 text-2xl text-white">Samuelson MUKIZA</div>
                 <div className="flex px-3 w- text-white text-center justify-center italic text-2xl py-3">
-                  “ I am excited to have completed the Python for Data Science
-                  course at Global Nexus Institute, gaining invaluable skills. I
-                  highly recommend this course to anyone passionate about data
-                  science. ”
+                  &lsquo;&lsquo; I am excited to have completed the Python for
+                  Data Science course at Global Nexus Institute, gaining
+                  invaluable skills. I highly recommend this course to anyone
+                  passionate about data science. &rsquo;&rsquo;
                 </div>
               </div>
               <div
@@ -176,10 +178,11 @@ export default function Home() {
                 </div>
                 <div className="my-5 text-2xl text-white">Didier Ngamije</div>
                 <div className="flex justify-center px-3 w-full text-white text-center italic text-2xl justify-center py-3">
-                  “ Global Nexus Institute's Python for Data Science course has
-                  significantly improved My data analysis skills, with
-                  knowledgeable and supportive instructors. I highly recommend
-                  you to Join Global Nexus Institute courses.”
+                  &lsquo;&lsquo; Global Nexus Institute&rsquo;s Python for Data
+                  Science course has significantly improved My data analysis
+                  skills, with knowledgeable and supportive instructors. I
+                  highly recommend you to Join Global Nexus Institute
+                  courses.&rsquo;&rsquo;
                 </div>
               </div>
               {/* <div
