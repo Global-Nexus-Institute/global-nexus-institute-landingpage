@@ -20,7 +20,7 @@ export default function CourseContainer() {
   }, [getCourses]);
 
   return (
-    <div className="bg-transparent p-3">
+    <div className="bg-transparent h-[100%]">
       <div className="flex items-center flex-col px-3 md:grid md:grid-cols-3 gap-2">
         {/* <Skeleton loading={loading}> */}
         {courses.map((course: Course) => (

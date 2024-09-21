@@ -26,29 +26,31 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, key }) => {
     </a>,
   ];
   return (
-    <Card
-      key={course.uuid}
-      hoverable
-      style={{ width: "85%" }}
-      cover={
-        <Image
-          alt={course.slug}
-          src={course.main_image}
-          width="100%"
-          height={"10%"}
-        />
-      }
-      className="sm:h-[300px] md:h-[400px] lg:h-auto"
-      actions={actions}
-    >
-      <Meta
-        title={course.name}
-        description={
-          <div className="flex h-[30%] md:h-full">
-            <p className="text-sm">{course.short_intro}</p>
-          </div>
+    <div className="container">
+      <Card
+        key={course.uuid}
+        hoverable
+        style={{ width: "85%" }}
+        cover={
+          <Image
+            alt={course.slug}
+            src={course.main_image}
+            width="100%"
+            height={"10%"}
+          />
         }
-      />
-    </Card>
+        className="sm:h-[300px] md:h-[400px] lg:h-auto"
+        actions={actions}
+      >
+        <Meta
+          title={course.name}
+          description={
+            <div className="flex h-[30%] md:h-full">
+              <p className="text-sm">{course.short_intro}</p>
+            </div>
+          }
+        />
+      </Card>
+    </div>
   );
 };
