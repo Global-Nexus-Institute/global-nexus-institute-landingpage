@@ -2,8 +2,11 @@ import {
   HomeOutlined,
   MoneyCollectFilled,
   FormOutlined,
+  EditOutlined,
 } from "@ant-design/icons";
 import { Image, Layout, Menu, MenuProps } from "antd";
+import Link from "next/link";
+
 type MenuItem = Required<MenuProps>["items"][number];
 const items: MenuItem[] = [
   {
@@ -31,6 +34,32 @@ const items: MenuItem[] = [
     label: "Apply",
     key: "apply",
     icon: <FormOutlined />,
+    children: [
+      {
+        key: "apply1",
+        label: (
+          <Link
+            href={"https://form.jotform.com/242266972261561"}
+            target="_blank"
+          >
+            Course Application
+          </Link>
+        ),
+        icon: <EditOutlined />,
+      },
+      {
+        key: "apply2",
+        label: (
+          <Link
+            href={"https://form.jotform.com/242267742948569"}
+            target="_blank"
+          >
+            Volunteer Application
+          </Link>
+        ),
+        icon: <EditOutlined />,
+      },
+    ],
   },
   {
     label: "Donate",
@@ -58,23 +87,24 @@ const TopMenu: React.FC = () => {
       className="px-0"
     >
       <div
-        className="logo w-[10%] h-[100%] flex justify-center items-center bg-cover image-cover bg-gray-500/20"
+        className="logo w-[10%] h-[100%] flex justify-center items-center  bg-contain bg-gray-500/20"
         style={{
           backgroundImage: `url(/assets/images/logo.png)`,
           // backgroundColor: "white",
+          backgroundRepeat: "no-repeat",
         }}
       />
       <Menu
+        theme="dark"
         style={{
           flex: 1,
           minWidth: 0,
           width: "100%",
           justifyContent: "center",
-          backgroundColor: "transparent",
           color: "white",
+          background: "transparent",
         }}
         mode="horizontal"
-        className="bg-transparent text-white"
         items={items}
       />
       <div className="flex px-2 rounded-lg text-md justify-center items-center bg-gray-500/10">
