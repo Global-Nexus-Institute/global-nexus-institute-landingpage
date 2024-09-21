@@ -15,3 +15,9 @@ export interface TeamMembers {
   title: string;
   profileImage: string;
 }
+
+export interface SponsorsPartners{
+  title: string;
+  imageUrl: string;
+  content: string;
+}

@@ -1,4 +1,4 @@
-import { Course, TeamMembers } from "../types";
+import { Course, SponsorsPartners, TeamMembers } from "../types";
 
 export const teamMembers: TeamMembers[] = [
   {
@@ -166,6 +166,39 @@ export const sampleFeaturedCourses: Course[] = [
     activity_count: 2,
     main_image:
       "https://prod-illumidesk-api-media-ueef29.s3.amazonaws.com/campuses/611abe06-3ac9-4a6f-81dc-f2abcb084623/4.jpg",
+  },
+];
+
+export const sampleSponsorPartners: SponsorsPartners[] = [
+  {
+    title: "Sand Technologies",
+    imageUrl: "/assets/images/sandtechnology.jpg",
+    content:
+      "Leverage AI to make better,faster decisions about NetOps, investments and growth.",
+  },
+  {
+    title: "ALX Africa",
+    imageUrl: "/assets/images/alxventures.jpg",
+    content:
+      "Tap into AI to improve infrastructure planning and monitoring across the water and energy ecosystem.",
+  },
+  {
+    title: "RMI Institue",
+    imageUrl: "/assets/images/rmiinstitute.png",
+    content:
+      "Deploy AI solutions to quickly address your enterprise’s largest risk,",
+  },
+  {
+    title: "NCC Education",
+    imageUrl: "https://globalnexus.co.rw/images/Hello.png",
+    content:
+      "Leverage AI to make better,faster decisions about NetOps, investments and growth.",
+  },
+  {
+    title: "ICT Chamber",
+    imageUrl: "/assets/images/ictchamber.png",
+    content:
+      "Leverage AI to make better,faster decisions about NetOps, investments and growth.",
   },
 ];
 
