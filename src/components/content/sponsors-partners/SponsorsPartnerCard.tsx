@@ -15,6 +15,7 @@ export const SponsorsPartnerCard: React.FC<CardProps> = ({ data }) => {
           width={100}
           height={100}
           className="bg-white"
+          alt="sponsor_logo"
         />
       </div>
       <div>
