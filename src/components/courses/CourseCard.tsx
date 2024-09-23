@@ -50,7 +50,24 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, key }) => {
               <span className="text-xs">{course.lesson_count} lessons</span>
             </div>
           </div>
-          <div className="text-white text-sm">{course.short_intro}</div>
+          <div className="flex flex-col justify-between py-2 text-white text-sm">
+            <div>{course.short_intro}</div>
+            <div className="flex justify-end">
+              <span className="bg-blue-900/25 rounded-md p-2">
+               <a
+                key={`${key}-slug`}
+                href={`https://globalnexusinstitute.illumidesk.com/courses/${course.slug}`}
+                target="_blank"
+              >
+                Explore{" "}
+                <span>
+                  <EyeFilled key="view" title={course.slug} />
+                </span>
+              </a> 
+              </span>
+              
+            </div>
+          </div>
         </div>
       </div>
       {/* <Card
