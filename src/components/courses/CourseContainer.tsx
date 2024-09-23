@@ -20,11 +20,14 @@ export default function CourseContainer() {
   }, [getCourses]);
 
   return (
-    <div className="bg-transparent h-[100%]">
-      <div className="flex items-center flex-col px-3 md:grid md:grid-cols-3 gap-2">
+    <div className="bg-transparent h-[100%] w-full">
+      
+      <div className="flex items-center flex-col md:grid md:grid-cols-3 gap-4">
         {/* <Skeleton loading={loading}> */}
         {courses.map((course: Course) => (
-          <CourseCard key={course.uuid} course={course} />
+          <div className="flex h-[450px] md:w-80 card" key={course.uuid}>
+            <CourseCard key={course.uuid} course={course} />
+          </div>
         ))}
         {/* </Skeleton> */}
       </div>
