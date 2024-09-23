@@ -21,28 +21,6 @@ export default function Home() {
           <div className=" text-[2rem] md:text-[4rem] font-bold bg-gradient-to-r bg-clip-text text-transparent from-gnblueLight to-gnpink">
             Welcome to Global Nexus Institute !! Learn & Earn
           </div>
-          <div className="flex gap-2 md:text-[2vh] text-white ">
-            <div className="">
-              <Button>
-                <Link
-                  href={"https://form.jotform.com/242266972261561"}
-                  target="_blank"
-                >
-                  Course Application
-                </Link>
-              </Button>
-            </div>
-            <div>
-              <Button>
-                <Link
-                  href={"https://form.jotform.com/242267742948569"}
-                  target="_blank"
-                >
-                  Volunteer Application
-                </Link>
-              </Button>
-            </div>
-          </div>
         </div>
         <div className="flex h-[20%] justify-center  bg-gradient-to-b from-gnpink to-gnpingdark">
           <div className="flex w-[80%] justify-center md:items-center h-full text-[0.8rem] text-center text-white md:px-10">
@@ -55,7 +33,7 @@ export default function Home() {
       </header>
       <main className="h-full">
         <section>
-          <div className="h-[400px] bg-purple-900 ">
+          <div className="h-[400px] bg-gradient-to-r  to-gndarkblue from-purple-900 my-10 ">
             {/* Carousel info section */}
             <Carousel arrows className="h-[100%]">
               {carouselData.map((item, index) => (
@@ -66,27 +44,47 @@ export default function Home() {
         </section>
 
         {/* Course section */}
-        <section className="flex justify-center overflow-scroll">
-          <div
-            className="container flex flex-col items-center mt-10"
-            id="courses"
-          >
-            <h1 className="text-gnblueLight text-4xl text-center">
-              Our Featured Courses
-            </h1>
-            <CourseContainer />
+        <section className="flex  py-10 overflow-scroll">
+          <div className="flex space-y-10 flex-col items-center" id="courses">
+            <div className="w-[90%]">
+              <h1 className="text-gnblueLight text-4xl">
+                Our Featured Courses
+              </h1>
+              <div className="flex justify-center text-white text-mdd my-3 px-2">
+                Global Nexus Institute offers practical courses in Data Science,
+                Artificial Intelligence, Computer Basics, Cyber-Security, SQL
+                for Data Analysis and Business Analytics, allowing students to
+                learn through real-life simulations, gaining essential skills
+                for today's competitive job market.
+              </div>
+            </div>
+            <div className="[w-90%]">
+              <CourseContainer />
+            </div>
           </div>
         </section>
 
         {/* Adds */}
-        <section className="my-5">
-          <div className="h-[400px] bg-purple-900 ">
+        <section
+          className="my-5 bg-overlay bg-gndarkblue my-10 bg-image overlay"
+          style={{
+            backgroundImage: `url("/assets/images/bg2.jpg")`,
+            backgroundBlendMode: "overlay",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="h-[400px]  ">
             {/* Carousel info section */}
-            <Carousel arrows className="h-[100%]">
-              {carouselData.map((item, index) => (
-                <IntroCard data={item} key={index} />
-              ))}
-            </Carousel>
+            <div className="flex flex-col  px-3 justify-center h-full">
+              <div className="flex md:text-[2.5rem] font-bold bg-gradient-to-r bg-clip-text text-transparent from-white to-gnblueLight ">
+                Why is data compared to oil as the key resource for the future?
+              </div>
+              <div className="w-auto md:text-xl text-white border p-3">
+                <p></p>Global Nexus Institute Values: Innovation & Excellence{" "}
+              </div>
+            </div>
           </div>
         </section>
 
