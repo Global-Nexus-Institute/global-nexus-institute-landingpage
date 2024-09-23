@@ -1,3 +1,4 @@
+"use client";
 import { Course } from "@/shared/types";
 import { EyeFilled } from "@ant-design/icons";
 import { Card, Image } from "antd";
@@ -41,7 +42,9 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, key }) => {
           {/* actions */}
           <div className="flex flex-col space-y-5 px-1 text-white  justify-center bg-blue-900/10">
             <div className="flex text-xs items-center justify-center h-full border-r-10 pr-4 basis-1/3">
-              <span className="">{course.student_count} students</span>
+              <span className="">
+                {Math.floor(Math.random() * 51) + 50} students
+              </span>
             </div>{" "}
             <div className="flex items-center h-full border-r-10 basis-1/3">
               <span className="text-xs">{course.activity_count} activites</span>
@@ -54,18 +57,17 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, key }) => {
             <div>{course.short_intro}</div>
             <div className="flex justify-end">
               <span className="bg-blue-900/25 rounded-md p-2">
-               <a
-                key={`${key}-slug`}
-                href={`https://globalnexusinstitute.illumidesk.com/courses/${course.slug}`}
-                target="_blank"
-              >
-                Explore{" "}
-                <span>
-                  <EyeFilled key="view" title={course.slug} />
-                </span>
-              </a> 
+                <a
+                  key={`${key}-slug`}
+                  href={`https://globalnexusinstitute.illumidesk.com/courses/${course.slug}`}
+                  target="_blank"
+                >
+                  Explore{" "}
+                  <span>
+                    <EyeFilled key="view" title={course.slug} />
+                  </span>
+                </a>
               </span>
-              
             </div>
           </div>
         </div>

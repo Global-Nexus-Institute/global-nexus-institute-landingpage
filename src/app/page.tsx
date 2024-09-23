@@ -44,7 +44,7 @@ export default function Home() {
         </section>
 
         {/* Course section */}
-        <section className="flex  py-10 overflow-scroll">
+        <section className="flex  py-10 overflow-y-scroll w-full">
           <div className="flex space-y-10 flex-col items-center" id="courses">
             <div className="w-[90%]">
               <h1 className="text-gnblueLight text-4xl">
@@ -58,7 +58,7 @@ export default function Home() {
                 for today&apos;s competitive job market.
               </div>
             </div>
-            <div className="[w-90%]">
+            <div className="flex justify-center w-full">
               <CourseContainer />
             </div>
           </div>

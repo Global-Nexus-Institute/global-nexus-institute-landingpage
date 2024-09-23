@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from "react";
 import { CourseCard } from "./CourseCard";
 import { useAppSelector } from "@/lib/store/store.hooks";
@@ -21,11 +22,10 @@ export default function CourseContainer() {
 
   return (
     <div className="bg-transparent h-[100%] w-full">
-      
-      <div className="flex items-center flex-col md:grid md:grid-cols-3 gap-4">
+      <div className="flex px-2 md:flex-wrap gap-4">
         {/* <Skeleton loading={loading}> */}
         {courses.map((course: Course) => (
-          <div className="flex h-[450px] md:w-80 card" key={course.uuid}>
+          <div className="flex h-[450px] card" key={course.uuid}>
             <CourseCard key={course.uuid} course={course} />
           </div>
         ))}
