@@ -55,7 +55,7 @@ export default function Home() {
                 Artificial Intelligence, Computer Basics, Cyber-Security, SQL
                 for Data Analysis and Business Analytics, allowing students to
                 learn through real-life simulations, gaining essential skills
-                for today's competitive job market.
+                for today&apos;s competitive job market.
               </div>
             </div>
             <div className="[w-90%]">
