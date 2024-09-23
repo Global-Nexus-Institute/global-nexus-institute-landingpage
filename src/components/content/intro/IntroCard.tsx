@@ -12,10 +12,10 @@ export const IntroCard: React.FC<{ data: any; key: number }> = ({
         </div>
         <div className="md:text-xl  text-white">{data.description}</div>
       </div>
-      <div className="flex basis-3/5 p-3">
+      <div className="flex basis-3/5 px-3 bg-gndarblue">
         <iframe
           width="100%"
-          height="full"
+          height="100%"
           style={{ border: 0 }}
           src={data.videoLink}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
