@@ -81,8 +81,10 @@ export default function Home() {
               <div className="flex md:text-[2.5rem] font-bold bg-gradient-to-r bg-clip-text text-transparent from-white to-gnblueLight ">
                 Why is data compared to oil as the key resource for the future?
               </div>
-              <div className="w-auto md:text-xl text-white border p-3">
-                <p></p>Global Nexus Institute Values: Innovation & Excellence{" "}
+              <div className="w-auto md:text-xl text-white mt-4">
+                <span className="border p-3">
+                  Global Nexus Institute Values: Innovation & Excellence{" "}
+                </span>
               </div>
             </div>
           </div>
@@ -261,10 +263,12 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="h-[20%] px-10 flex justify-center space-x-10 text-gndarkblue text-md font-bold px-3 items-center gap-3">
-            <div className="p-2 bg-white">Email: info@globalnexus.co.rw</div>
-            <div className="p-2 bg-white">Location: Kigali Norsken</div>
-            <div className="p-2 bg-white">Phone: +250787406140</div>
+          <div className="h-[25%] px-5 flex justify-center space-x-3 text-gndarkblue text-md font-bold px-3 items-center gap-3 overflow-x-auto">
+            <div className="p-1 bg-white text-sm">
+              Email: info@globalnexus.co.rw
+            </div>
+            <div className="p-2 bg-white text-sm">Location: Kigali Norsken</div>
+            <div className="p-2 bg-white text-sm">Phone: +250787406140</div>
           </div>
         </footer>
       </div>

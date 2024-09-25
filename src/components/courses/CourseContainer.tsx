@@ -1,35 +1,25 @@
-"use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { CourseCard } from "./CourseCard";
-import { useAppSelector } from "@/lib/store/store.hooks";
-import { useCourses } from "@/shared/hooks/courses/courses.hooks";
+
 import { Course } from "@/shared/types";
-import { Skeleton } from "antd";
-import { RootState } from "@/lib/store/store";
+
 import { sampleFeaturedCourses } from "@/shared/data";
 
 export default function CourseContainer() {
-  const { getCourses } = useCourses();
-  const { courses: online, loading } = useAppSelector(
-    (state: RootState) => state.courses,
-  );
-
-  const courses = sampleFeaturedCourses;
-
+  const [courses, setCourses] = useState<Course[]>([]);
   useEffect(() => {
-    // getCourses();
-  }, [getCourses]);
+    // Simulate data fetching
+    setCourses(sampleFeaturedCourses);
+  }, []);
 
   return (
-    <div className="bg-transparent h-[100%] w-full">
-      <div className="flex px-2 md:flex-wrap gap-4">
-        {/* <Skeleton loading={loading}> */}
+    <div className="flex justify-center bg-transparent h-[100%] w-full ">
+      <div className="flex flex-col md:flex-row justify-center px-2 md:flex-wrap gap-4">
         {courses.map((course: Course) => (
           <div className="flex h-[450px] card" key={course.uuid}>
-            <CourseCard key={course.uuid} course={course} />
+            <CourseCard course={course} />
           </div>
         ))}
-        {/* </Skeleton> */}
       </div>
     </div>
   );

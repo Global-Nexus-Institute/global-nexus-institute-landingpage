@@ -1,4 +1,3 @@
-"use client";
 import { Course } from "@/shared/types";
 import { EyeFilled } from "@ant-design/icons";
 import { Card, Image } from "antd";
@@ -6,26 +5,11 @@ import React from "react";
 
 interface CourseCardProps {
   course: Course;
-  key: string;
 }
 
 const { Meta } = Card;
 
-export const CourseCard: React.FC<CourseCardProps> = ({ course, key }) => {
-  const actions = [
-    <div key={`${key}-student`}>{course.student_count} students</div>,
-    <div key={`${key}-lesson`}>{course.lesson_count} Lessons</div>,
-    <a
-      key={`${key}-slug`}
-      href={`https://globalnexusinstitute.illumidesk.com/courses/${course.slug}`}
-      target="_blank"
-    >
-      View{" "}
-      <span>
-        <EyeFilled key="view" title={course.slug} />
-      </span>
-    </a>,
-  ];
+export const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
   return (
     <div className="md:w-80 gap-4 h-full w-full shadow-lg ">
       <div
@@ -58,7 +42,7 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, key }) => {
             <div className="flex justify-end">
               <span className="bg-blue-900/25 rounded-md p-2">
                 <a
-                  key={`${key}-slug`}
+                  key={`slug`}
                   href={`https://globalnexusinstitute.illumidesk.com/courses/${course.slug}`}
                   target="_blank"
                 >
