@@ -17,6 +17,7 @@
     "css-loader": "^7.1.2",
     "enquire-js": "^0.2.1",
     "enquire.js": "^2.1.6",
+    "framer-motion": "^11.8.0",
     "less-loader": "^12.2.0",
     "next": "14.2.11",
     "rc-banner-anim": "^2.4.5",
