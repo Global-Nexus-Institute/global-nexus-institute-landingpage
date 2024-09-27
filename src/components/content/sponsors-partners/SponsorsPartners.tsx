@@ -13,7 +13,7 @@ export const SponsorsPartners = () => {
         opportunities. Together, we shape the future and advance the goals of
         our learners.
       </p>
-      <div className="flex md:grid md:grid-cols-3 gap-2 overflow-scroll">
+      <div className="flex md:grid md:grid-cols-3 gap-2 scrollbar-hidden overflow-scroll md:overflow-hidden">
         {sampleSponsorPartners.map((data, index) => (
           <SponsorsPartnerCard data={data} key={index} />
         ))}

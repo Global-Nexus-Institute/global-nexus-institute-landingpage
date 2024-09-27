@@ -31,7 +31,7 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main className="h-full">
+      <main className="h-full container">
         <section>
           <div className="h-[400px] bg-gradient-to-r  to-gndarkblue from-purple-900 my-10 ">
             {/* Carousel info section */}
@@ -44,7 +44,7 @@ export default function Home() {
         </section>
 
         {/* Course section */}
-        <section className="flex  py-10 overflow-y-scroll w-full">
+        <section className="flex  py-10 overflow-y-scroll scrollbar-hidden w-full">
           <div className="flex space-y-10 flex-col items-center" id="courses">
             <div className="w-[90%]">
               <h1 className="text-gnblueLight text-4xl">
@@ -264,11 +264,13 @@ export default function Home() {
             </div>
           </div>
           <div className="h-[25%] px-5 flex justify-center space-x-3 text-gndarkblue text-md font-bold px-3 items-center gap-3 overflow-x-auto">
-            <div className="p-1 bg-white text-sm">
+            <div className="p-1 text-white text-sm">
               Email: info@globalnexus.co.rw
             </div>
-            <div className="p-2 bg-white text-sm">Location: Kigali Norsken</div>
-            <div className="p-2 bg-white text-sm">Phone: +250787406140</div>
+            <div className="p-2 text-white text-sm">
+              Location: Kigali Norsken
+            </div>
+            <div className="p-2 text-white text-sm">Phone: +250787406140</div>
           </div>
         </footer>
       </div>
