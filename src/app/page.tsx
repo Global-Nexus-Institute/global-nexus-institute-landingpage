@@ -243,7 +243,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-center gap-4 w-full md:w-[50%]">
+              <div className="flex pl-3 gap-4 w-full md:w-[50%]">
                 <div className="flex flex-col ">
                   <div className="mb-3">WHAT WE DO</div>
                   <div className="text-gray-500">Training</div>
