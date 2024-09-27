@@ -15,7 +15,14 @@ import {
 export default function Home() {
   return (
     <div className="w-full">
-      <header className="md:h-[100vh] w-full">
+      <header
+        className="h-[100vh] w-full bg-cover overlay bg-gndarkblue"
+        style={{
+          backgroundImage: `url(/assets/images/bgimage.jpg)`,
+          backgroundBlendMode: "overlay",
+          backgroundPosition: "center",
+        }}
+      >
         <TopMenu />
         <div className="h-[70%] px-10 flex flex-col justify-center ">
           <div className=" text-[2rem] md:text-[4rem] font-bold bg-gradient-to-r bg-clip-text text-transparent from-gnblueLight to-gnpink">
@@ -23,7 +30,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex h-[20%] justify-center  bg-gradient-to-b from-gnpink to-gnpingdark">
-          <div className="flex w-[80%] justify-center md:items-center h-full text-[0.8rem] text-center text-white md:px-10">
+          <div className="flex w-[80%] justify-center md:items-center h-full text-[0.8rem] md:text-[1.5rem] text-center text-white md:px-10">
             Gain insights from industry leaders at Global Nexus Institute. Our
             expert-led sessions offer valuable knowledge in Data Science,
             Computer Basics, AI, and Cyber-Security. Enhance your skills and
@@ -31,9 +38,9 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main className="h-full container">
+      <main className="h-full flex flex-col ">
         <section>
-          <div className="h-[400px] bg-gradient-to-r  to-gndarkblue from-purple-900 my-10 ">
+          <div className=" h-[400px] bg-gradient-to-r  to-gndarkblue from-purple-900 my-10 ">
             {/* Carousel info section */}
             <Carousel arrows className="h-[100%]">
               {carouselData.map((item, index) => (
@@ -44,7 +51,7 @@ export default function Home() {
         </section>
 
         {/* Course section */}
-        <section className="flex  py-10 overflow-y-scroll scrollbar-hidden w-full">
+        <section className="flex container py-10 overflow-y-scroll scrollbar-hidden w-full">
           <div className="flex space-y-10 flex-col items-center" id="courses">
             <div className="w-[90%]">
               <h1 className="text-gnblueLight text-4xl">
@@ -91,7 +98,7 @@ export default function Home() {
         </section>
 
         {/* Sponsors and Partners */}
-        <section className="bg-gradient-to-b from-gnpink to-gndarkblue p-10 ">
+        <section className="bg-gradient-to-b from-gnpink to-gndarkblue p-10  ">
           <SponsorsPartners />
         </section>
 
