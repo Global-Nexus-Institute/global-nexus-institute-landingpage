@@ -35,9 +35,9 @@ export const teamMembers: TeamMembers[] = [
 
 export const carouselData = [
   {
-    title: "About Global Nexus Institute",
+    title: "Our Accreditations",
     description:
-      "At Global Nexus Institute, we empower learners with 21st-century skills in data analysis and programming. We also offer consultancy services for students seeking to study at various universities and programs.",
+      " Global Nexus Institute is accredited by NCC (UK) to deliver courses in data science, AI, cyber-security, and computer basics, providing globally recognized certifications.",
     videoLink: "https://www.youtube.com/embed/su_vds3i8hA",
   },
   {
