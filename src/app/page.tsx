@@ -291,13 +291,15 @@ export default function Home() {
             </div>
           </div>
           <div className="h-[25%] px-5 flex justify-center space-x-3 text-gndarkblue text-md font-bold px-3 items-center gap-3 overflow-x-auto">
-            <div className="p-1 text-white text-sm">
+            <div className="flex p-1 text-white text-xs md:text-sm">
               Email: info@globalnexus.co.rw
             </div>
-            <div className="p-2 text-white text-sm">
-              Location: Kigali Norsken
+            <div className="flex p-2 text-white text-xs md:text-sm">
+              Location: Norrsken, KN 78 St, Kigali, Rwanda
             </div>
-            <div className="p-2 text-white text-sm">Phone: +250787406140</div>
+            <div className="flex p-2 text-white text-xs md:text-sm">
+              Phone: +250787406140
+            </div>
           </div>
         </footer>
       </div>
