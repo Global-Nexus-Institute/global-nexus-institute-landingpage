@@ -7,6 +7,7 @@ import { IntroCard } from "@/components/content/intro/IntroCard";
 import Link from "next/link";
 import { SponsorsPartners } from "@/components/content/sponsors-partners/SponsorsPartners";
 import {
+  FacebookOutlined,
   InstagramFilled,
   LinkedinOutlined,
   XOutlined,
@@ -257,15 +258,34 @@ export default function Home() {
               <div className="flex flex-col basis-1/3 justify-center">
                 <div className="mb-3">FOLLOW US ON SOCIAL MEDIA</div>
                 <div className="flex space-x-4">
-                  <div className="text-gray-500 text-2xl">
+                  <Link
+                    href={
+                      "https://www.facebook.com/profile.php?id=61560364154598 "
+                    }
+                    className="text-gray-500 text-2xl"
+                  >
+                    <FacebookOutlined />
+                  </Link>
+                  <Link
+                    href={
+                      "https://www.linkedin.com/company/global-nexus-institute/?viewAsMember=true "
+                    }
+                    className="text-gray-500 text-2xl"
+                  >
                     <LinkedinOutlined />
-                  </div>
-                  <div className="text-gray-500  text-2xl">
+                  </Link>
+                  <Link
+                    href={"https://www.instagram.com/globalnexusinstitute/ "}
+                    className="text-gray-500  text-2xl"
+                  >
                     <InstagramFilled />
-                  </div>
-                  <div className="text-gray-500  text-2xl">
+                  </Link>
+                  <Link
+                    href={"https://x.com/GlobalNexusInt"}
+                    className="text-gray-500  text-2xl"
+                  >
                     <XOutlined />
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -43,7 +43,7 @@ export const carouselData = [
   {
     title: "Explore Our Courses",
     description:
-      "At Global Nexus Institute, we empower learners with 21st-century skills in data analysis and programming. We also offer consultancy services for students seeking to study at various universities and programs.",
+      "At Global Nexus Institute, our courses, delivered via IllumiDesk LMS, provide hands-on learning and recognized certifications. With IllumiDesk, access materials, track progress, and complete assignments in a structured environment, backed by NCC (UK) accreditation.",
     videoLink: "https://www.youtube.com/embed/QdaAd4E0gSg",
   },
 ];
