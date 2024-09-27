@@ -219,86 +219,88 @@ export default function Home() {
       </main>
       <div className="text-white flex flex-col w-full bg-blue-900/10 mt-10">
         <footer className="flex  flex-col h-[400px] w-full mt-2">
-          <div className="md:flex w-full  h-[80%] ">
-            <div className="flex space-x-3 md:w-[50%]">
-              <div className="w-[50%] flex justify-center items-center">
-                <Image
-                  src="/assets/images/logo.png"
-                  width={"100%"}
-                  height={100}
-                  alt="logo"
-                  className="bg-gray-500 rounded-sm"
-                />{" "}
-              </div>
+          <div className="flex flex-col w-full h-full justify-center h-[80%]">
+            <div className="md:flex w-full  ">
+              <div className="flex space-x-3 md:w-[50%]">
+                <div className="w-[50%] flex justify-center items-center">
+                  <Image
+                    src="/assets/images/logo.png"
+                    width={"100%"}
+                    height={100}
+                    alt="logo"
+                    className="bg-gray-500 rounded-sm"
+                  />{" "}
+                </div>
 
-              <div className="flex flex-col justify-center">
-                <h3 className="text-xl font-bold mb-5">
-                  Imagine Your Future with Global Nexus
-                </h3>
-                <p>
-                  We bring expertise, experience, and cutting-edge solutions to
-                  help organizations navigate their digital transformation
-                  journey.
-                </p>
+                <div className="flex flex-col justify-center">
+                  <h3 className="text-xl font-bold mb-5">
+                    Imagine Your Future with Global Nexus
+                  </h3>
+                  <p>
+                    We bring expertise, experience, and cutting-edge solutions
+                    to help organizations navigate their digital transformation
+                    journey.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="flex justify-center items-center gap-4 space-x-md w-full md:w-[50%]">
-              <div className="flex flex-col basis-1/4">
-                <div className="mb-3">WHAT WE DO</div>
-                <div className="text-gray-500">Training</div>
-                <div className="text-gray-500">Consultancy</div>
-                <div className="text-gray-500">Recent Trends</div>
-              </div>
-              <div className="flex flex-col basis-1/4">
-                <div className="mb-3">COMPANY</div>
-                <div className="text-gray-500">About Us</div>
-                <div className="text-gray-500">Events</div>
-                <div className="text-gray-500">Careers</div>
-              </div>
-              <div className="flex flex-col basis-1/3 justify-center">
-                <div className="mb-3">FOLLOW US ON SOCIAL MEDIA</div>
-                <div className="flex space-x-4">
-                  <Link
-                    href={
-                      "https://www.facebook.com/profile.php?id=61560364154598 "
-                    }
-                    className="text-gray-500 text-2xl"
-                  >
-                    <FacebookOutlined />
-                  </Link>
-                  <Link
-                    href={
-                      "https://www.linkedin.com/company/global-nexus-institute/?viewAsMember=true "
-                    }
-                    className="text-gray-500 text-2xl"
-                  >
-                    <LinkedinOutlined />
-                  </Link>
-                  <Link
-                    href={"https://www.instagram.com/globalnexusinstitute/ "}
-                    className="text-gray-500  text-2xl"
-                  >
-                    <InstagramFilled />
-                  </Link>
-                  <Link
-                    href={"https://x.com/GlobalNexusInt"}
-                    className="text-gray-500  text-2xl"
-                  >
-                    <XOutlined />
-                  </Link>
+              <div className="flex justify-center items-center gap-4 space-x-md w-full md:w-[50%]">
+                <div className="flex flex-col basis-1/4">
+                  <div className="mb-3">WHAT WE DO</div>
+                  <div className="text-gray-500">Training</div>
+                  <div className="text-gray-500">Consultancy</div>
+                  <div className="text-gray-500">Recent Trends</div>
+                </div>
+                <div className="flex flex-col basis-1/4">
+                  <div className="mb-3">COMPANY</div>
+                  <div className="text-gray-500">About Us</div>
+                  <div className="text-gray-500">Events</div>
+                  <div className="text-gray-500">Careers</div>
+                </div>
+                <div className="flex flex-col basis-1/3 justify-center">
+                  <div className="mb-3">FOLLOW US ON SOCIAL MEDIA</div>
+                  <div className="flex space-x-4">
+                    <Link
+                      href={
+                        "https://www.facebook.com/profile.php?id=61560364154598 "
+                      }
+                      className="text-gray-500 text-2xl"
+                    >
+                      <FacebookOutlined />
+                    </Link>
+                    <Link
+                      href={
+                        "https://www.linkedin.com/company/global-nexus-institute/?viewAsMember=true "
+                      }
+                      className="text-gray-500 text-2xl"
+                    >
+                      <LinkedinOutlined />
+                    </Link>
+                    <Link
+                      href={"https://www.instagram.com/globalnexusinstitute/ "}
+                      className="text-gray-500  text-2xl"
+                    >
+                      <InstagramFilled />
+                    </Link>
+                    <Link
+                      href={"https://x.com/GlobalNexusInt"}
+                      className="text-gray-500  text-2xl"
+                    >
+                      <XOutlined />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="h-[25%] px-5 flex justify-center space-x-3 text-gndarkblue text-md font-bold px-3 items-center gap-3 overflow-x-auto">
-            <div className="flex p-1 text-white text-xs md:text-sm">
-              Email: info@globalnexus.co.rw
-            </div>
-            <div className="flex p-2 text-white text-xs md:text-sm">
-              Location: Norrsken, KN 78 St, Kigali, Rwanda
-            </div>
-            <div className="flex p-2 text-white text-xs md:text-sm">
-              Phone: +250787406140
+            <div className="h-[25%] px-5 flex justify-center space-x-3 text-gndarkblue text-md font-bold px-3 items-center gap-3 overflow-x-auto">
+              <div className="flex p-1 text-white text-xs md:text-sm">
+                Email: info@globalnexus.co.rw
+              </div>
+              <div className="flex p-2 text-white text-xs md:text-sm">
+                Location: Norrsken, KN 78 St, Kigali, Rwanda
+              </div>
+              <div className="flex p-2 text-white text-xs md:text-sm">
+                Phone: +250787406140
+              </div>
             </div>
           </div>
         </footer>
