@@ -225,7 +225,7 @@ export default function Home() {
                 <div className="w-[50%] flex justify-center items-center">
                   <Image
                     src="/assets/images/logo.png"
-                    width={"100%"}
+                    width={"80%"}
                     height={100}
                     alt="logo"
                     className="bg-gray-500 rounded-sm"
@@ -243,20 +243,20 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-center items-center gap-4 space-x-md w-full md:w-[50%]">
-                <div className="flex flex-col basis-1/4">
+              <div className="flex justify-center gap-4 w-full md:w-[50%]">
+                <div className="flex flex-col ">
                   <div className="mb-3">WHAT WE DO</div>
                   <div className="text-gray-500">Training</div>
                   <div className="text-gray-500">Consultancy</div>
                   <div className="text-gray-500">Recent Trends</div>
                 </div>
-                <div className="flex flex-col basis-1/4">
+                <div className="flex flex-col">
                   <div className="mb-3">COMPANY</div>
                   <div className="text-gray-500">About Us</div>
                   <div className="text-gray-500">Events</div>
                   <div className="text-gray-500">Careers</div>
                 </div>
-                <div className="flex flex-col basis-1/3 justify-center">
+                <div className="flex flex-col">
                   <div className="mb-3">FOLLOW US ON SOCIAL MEDIA</div>
                   <div className="flex space-x-4">
                     <Link
