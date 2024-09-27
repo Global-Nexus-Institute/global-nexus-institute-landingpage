@@ -244,19 +244,19 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex pl-3 gap-4 w-full md:w-[50%]">
-                <div className="flex flex-col ">
+                <div className="flex w-[25%] flex-col">
                   <div className="mb-3">WHAT WE DO</div>
                   <div className="text-gray-500">Training</div>
                   <div className="text-gray-500">Consultancy</div>
                   <div className="text-gray-500">Recent Trends</div>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex w-[25%]  flex-col">
                   <div className="mb-3">COMPANY</div>
                   <div className="text-gray-500">About Us</div>
                   <div className="text-gray-500">Events</div>
                   <div className="text-gray-500">Careers</div>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col w-[40%] md:pr-5 ">
                   <div className="mb-3">FOLLOW US ON SOCIAL MEDIA</div>
                   <div className="flex space-x-4">
                     <Link
