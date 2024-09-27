@@ -4,7 +4,7 @@ import { SponsorsPartnerCard } from "./SponsorsPartnerCard";
 
 export const SponsorsPartners = () => {
   return (
-    <div className="flex flex-col w-full space-y-10">
+    <div className="flex flex-col w-full space-y-10 container">
       <h1 className="text-gnblueLight text-4xl ">Our Partners and Sponsors</h1>
       <p className="text-white">
         We collaborate with industry leaders and sponsors to drive innovation
