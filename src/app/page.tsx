@@ -33,7 +33,7 @@ export default function Home() {
         </div>
 
 
-        <div className="flex h-[20%] justify-center  bg-gradient-to-b from-gnpink to-gnpingdark">
+        <div className="flex h-[21%] justify-center  bg-gradient-to-b from-gnpink to-gnpingdark">
           <div className="flex w-[80%] justify-center md:items-center h-full text-[0.8rem] md:text-[1.5rem] text-center text-white md:px-10">
             Gain insights from industry leaders at Global Nexus Institute. Our
             expert-led sessions offer valuable knowledge in Data Science,
