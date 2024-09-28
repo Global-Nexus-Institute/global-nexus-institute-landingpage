@@ -33,18 +33,32 @@ export default function Home() {
         </div>
 
 
-        <div className="flex h-[21%] justify-center  bg-gradient-to-b from-gnpink to-gnpingdark">
-          <div className="flex w-[80%] justify-center md:items-center h-full text-[0.8rem] md:text-[1.5rem] text-center text-white md:px-10">
-            Gain insights from industry leaders at Global Nexus Institute. Our
-            expert-led sessions offer valuable knowledge in Data Science,
-            Computer Basics, AI, and Cyber-Security. Enhance your skills and
-            stay ahead in your field with us.
+        {/* Course section */}
+        <section className="flex container mx-auto py-10 w-full">
+          <div className="flex flex-col space-y-100 items-center w-full" id="courses">
+            <div className="flex flex-col w-full space-y-10 container mx-auto px-8 md:px-16 lg:px-90">
+              {/* <div className="w-[100%] mx-auto"> */}
+              <div className="flex h-auto justify-center bg-gradient-to-b from-gnpink to-gnpingdark p-8"> {/* Added padding for better spacing */}
+                <div className="flex w-full justify-center md:items-center h-full text-[1.5rem] md:text-[1.5rem] text-center text-white">
+                  Gain insights from industry leaders at Global Nexus Institute. Our
+                  expert-led sessions offer valuable knowledge in Data Science,
+                  Computer Basics, AI, and Cyber-Security. Enhance your skills and
+                  stay ahead in your field with us
+                  {/* skills for today's competitive job market. */}
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center w-full">
+              {/* <CourseContainer /> */}
+            </div>
           </div>
-        </div>
+        </section>
+
       </header>
       <main className="h-full flex flex-col ">
+
         <section>
-          <div className=" h-[400px] bg-gradient-to-r  to-gndarkblue from-purple-900 my-10 ">
+          <div className="h-[400px] bg-gradient-to-r to-gndarkblue from-purple-900 my-10 mx-auto max-w-7xl px-8">
             {/* Carousel info section */}
             <Carousel arrows className="h-[100%]">
               {carouselData.map((item, index) => (
@@ -53,6 +67,7 @@ export default function Home() {
             </Carousel>
           </div>
         </section>
+
 
         {/* Course section */}
         <section className="flex container mx-auto py-10 w-full">
@@ -115,7 +130,7 @@ export default function Home() {
             <h1 className="text-center text-gnblueLight text-4xl my-2">
               Our Team
             </h1>
-            <div className="md:grid md:grid-cols-3 gap-3 flex-col justify-center w-[78%]">
+            <div className="md:grid md:grid-cols-3 gap-3 flex-col justify-center w-[85%]">
               {teamMembers.map(({ names, profileImage, title }, index) => (
                 <div
                   key={index}
@@ -145,7 +160,7 @@ export default function Home() {
         <section className="mt-5 ">
           <div className=" items-center flex flex-col">
             <h1 className="text-center text-gnblueLight text-4xl">
-              Testimonals
+              Recent Trends
             </h1>
             <div className="bg-overlay flex flex-col justify-center items-center md:flex-row md:items-center md:space-x-2 gap-2 h-[80%] w-[86%] mt-5">
               <div
@@ -232,8 +247,8 @@ export default function Home() {
                 <div className="flex w-[50%] flex justify-center items-center mb-1"> {/* Reduced margin below logo */}
                   <Image
                     src="/assets/images/logo.png"
-                    width={"25%"}
-                    height={100}
+                    width={"30%"}
+                    height={120}
                     alt="logo"
                     className="bg-gray-500 rounded-sm"
                   />
@@ -313,7 +328,7 @@ export default function Home() {
           className="underline"
         >
           {" "}
-          Global Nexus Institute
+          Global Nexus Institute Ltd
         </a>
       </div>
     </div>

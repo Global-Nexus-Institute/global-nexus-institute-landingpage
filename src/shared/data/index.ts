@@ -53,8 +53,6 @@ export const carouselData = [
 
 
 
-
-
 export const sampleFeaturedCourses: Course[] = [
   {
     uuid: "8f1b2e19-3d3f-4740-bb93-d1da991b6969",
@@ -192,31 +190,31 @@ export const sampleSponsorPartners: SponsorsPartners[] = [
     title: "Sand Technologies",
     imageUrl: "/assets/images/sandtechnology.jpg",
     content:
-    "Leverage AI to make better,faster decisions about NetOps, investments and growth.",
+    "Global AI solutions company with expertise in enterprise and industrial AI, and data science.",
   },
   {
     title: "ALX Africa",
     imageUrl: "/assets/images/alxventures.jpg",
     content:
-      "Tap into AI to improve infrastructure planning and monitoring across the water and energy ecosystem.",
+      " ALX Africa is one of the largest training platforms for youth on the continent.",
   },
   {
     title: "RMI Institue",
     imageUrl: "/assets/images/rmiinstitute.png",
     content:
-      "Deploy AI solutions to quickly address your enterprise’s largest risk,",
+      "Rwanda Management Institute enhances skills through training and consultancy services.",
   },
   {
     title: "NCC Education",
     imageUrl: "https://globalnexus.co.rw/images/Hello.png",
     content:
-      "Leverage AI to make better,faster decisions about NetOps, investments and growth.",
+      "NCC Education is a UK-based awarding body that provides internationally recognized qualifications",
   },
   {
     title: "ICT Chamber",
     imageUrl: "/assets/images/ictchamber.png",
     content:
-      "Leverage AI to make better,faster decisions about NetOps, investments and growth.",
+      "The ICT Chamber in Rwanda is a member-based organization focused on advancing (ICT) sector.",
   },
 ];
 
