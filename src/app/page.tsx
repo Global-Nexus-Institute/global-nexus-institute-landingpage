@@ -82,7 +82,7 @@ export default function Home() {
                   Global Nexus Institute offers practical courses in Data Science, Artificial Intelligence,
                   Computer Basics, Cyber-Security, SQL for Data Analysis and Business Analytics,
                   allowing students to learn through real-life simulations, gaining essential
-                  skills for today's competitive job market.
+                  skills for today&apos;s competitive job market.
                 </div>
               </div>
             </div>
