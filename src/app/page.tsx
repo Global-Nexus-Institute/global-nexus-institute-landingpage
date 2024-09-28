@@ -43,7 +43,7 @@ export default function Home() {
                   Gain insights from industry leaders at Global Nexus Institute. Our
                   expert-led sessions offer valuable knowledge in Data Science,
                   Computer Basics, AI, and Cyber-Security. Enhance your skills and
-                  stay ahead in your field with us
+                  stay ahead in your field with us.
                   {/* skills for today's competitive job market. */}
                 </div>
               </div>
