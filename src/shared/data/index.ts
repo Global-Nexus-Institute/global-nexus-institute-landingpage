@@ -3,8 +3,8 @@ import { Course, SponsorsPartners, TeamMembers } from "../types";
 export const teamMembers: TeamMembers[] = [
   {
     names: "Theoneste NDAYISENGA",
-    title: "Product Developer",
-    profileImage: "https://globalnexus.co.rw/images/Theoneste.png",
+    title: "Founder & CEO",
+    profileImage: "https://globalnexus.co.rw/images/Theoneste.png", 
   },
   {
     names: "Vedaste NYANDWI",
@@ -33,6 +33,8 @@ export const teamMembers: TeamMembers[] = [
   },
 ];
 
+
+
 export const carouselData = [
   {
     title: "Our Accreditations",
@@ -40,6 +42,7 @@ export const carouselData = [
       " Global Nexus Institute is accredited by NCC (UK) to deliver courses in data science, AI, cyber-security, and computer basics, providing globally recognized certifications.",
     videoLink: "https://www.youtube.com/embed/su_vds3i8hA",
   },
+
   {
     title: "Explore Our Courses",
     description:
@@ -47,6 +50,8 @@ export const carouselData = [
     videoLink: "https://www.youtube.com/embed/QdaAd4E0gSg",
   },
 ];
+
+
 
 export const sampleFeaturedCourses: Course[] = [
   {
@@ -63,6 +68,7 @@ export const sampleFeaturedCourses: Course[] = [
       "https://prod-illumidesk-api-media-ueef29.s3.amazonaws.com/campuses/611abe06-3ac9-4a6f-81dc-f2abcb084623/2.jpg",
   },
 
+
   {
     uuid: "7d158738-13c2-418f-a149-83035c30210c",
     name: "SQL for Data Analysis",
@@ -76,6 +82,8 @@ export const sampleFeaturedCourses: Course[] = [
     main_image:
       "https://prod-illumidesk-api-media-ueef29.s3.amazonaws.com/campuses/611abe06-3ac9-4a6f-81dc-f2abcb084623/images.jpeg",
   },
+
+
   {
     uuid: "77d6ff1d-5133-4ef4-822a-9b30c66f6c22",
     name: "Data Skills for Excel Professionals",
@@ -89,6 +97,8 @@ export const sampleFeaturedCourses: Course[] = [
     main_image:
       "https://prod-illumidesk-api-media-ueef29.s3.amazonaws.com/campuses/611abe06-3ac9-4a6f-81dc-f2abcb084623/alison.jpg",
   },
+
+
   {
     uuid: "660fac45-d14b-4180-a866-b1807e43adc0",
     name: "Basics Python Data Analysis",
@@ -102,6 +112,8 @@ export const sampleFeaturedCourses: Course[] = [
     main_image:
       "https://prod-illumidesk-api-media-ueef29.s3.amazonaws.com/campuses/611abe06-3ac9-4a6f-81dc-f2abcb084623/pythonf_for_data_science.png",
   },
+
+
   {
     uuid: "cbc19e2d-507d-4596-b683-3a8555252489",
     name: "Python Data Analytics",
@@ -115,6 +127,8 @@ export const sampleFeaturedCourses: Course[] = [
     main_image:
       "https://prod-illumidesk-api-media-ueef29.s3.amazonaws.com/campuses/611abe06-3ac9-4a6f-81dc-f2abcb084623/1682952919031.jpeg",
   },
+
+
   {
     uuid: "077d3c58-9e6c-43ba-9ee8-a0c1f303fd18",
     name: "Data Analytics With Python and SQL",
@@ -128,6 +142,8 @@ export const sampleFeaturedCourses: Course[] = [
     main_image:
       "https://prod-illumidesk-api-media-ueef29.s3.amazonaws.com/campuses/611abe06-3ac9-4a6f-81dc-f2abcb084623/1705264155547.jpeg",
   },
+
+
   {
     uuid: "2aed3935-1808-4f17-bc4e-30dc7d77edcd",
     name: "Data Science: Introduction",
@@ -154,19 +170,19 @@ export const sampleFeaturedCourses: Course[] = [
     main_image:
       "https://prod-illumidesk-api-media-ueef29.s3.amazonaws.com/campuses/611abe06-3ac9-4a6f-81dc-f2abcb084623/Data_Science.jpg",
   },
-  {
-    uuid: "103bbba8-731f-412f-bb3d-74e0c6119443",
-    name: "Business Data Analytics",
-    slug: "business-data-analytics",
-    short_intro:
-      "Explore powerful tools and techniques to analyze and interpret data for business decision-making at our Business Data Analytics campus.",
-    is_featured: false,
-    lesson_count: 5,
-    student_count: 0,
-    activity_count: 2,
-    main_image:
-      "https://prod-illumidesk-api-media-ueef29.s3.amazonaws.com/campuses/611abe06-3ac9-4a6f-81dc-f2abcb084623/4.jpg",
-  },
+  // {
+  //   uuid: "103bbba8-731f-412f-bb3d-74e0c6119443",
+  //   name: "Business Data Analytics",
+  //   slug: "business-data-analytics",
+  //   short_intro:
+  //     "Explore powerful tools and techniques to analyze and interpret data for business decision-making at our Business Data Analytics campus.",
+  //   is_featured: false,
+  //   lesson_count: 5,
+  //   student_count: 0,
+  //   activity_count: 2,
+  //   main_image:
+  //     "https://prod-illumidesk-api-media-ueef29.s3.amazonaws.com/campuses/611abe06-3ac9-4a6f-81dc-f2abcb084623/4.jpg",
+  // },
 ];
 
 export const sampleSponsorPartners: SponsorsPartners[] = [
@@ -174,31 +190,31 @@ export const sampleSponsorPartners: SponsorsPartners[] = [
     title: "Sand Technologies",
     imageUrl: "/assets/images/sandtechnology.jpg",
     content:
-      "Leverage AI to make better,faster decisions about NetOps, investments and growth.",
+    "Global AI solutions company with expertise in enterprise and industrial AI, and data science.",
   },
   {
     title: "ALX Africa",
     imageUrl: "/assets/images/alxventures.jpg",
     content:
-      "Tap into AI to improve infrastructure planning and monitoring across the water and energy ecosystem.",
+      " ALX Africa is one of the largest training platforms for youth on the continent.",
   },
   {
     title: "RMI Institue",
     imageUrl: "/assets/images/rmiinstitute.png",
     content:
-      "Deploy AI solutions to quickly address your enterprise’s largest risk,",
+      "Rwanda Management Institute enhances skills through training and consultancy services.",
   },
   {
     title: "NCC Education",
     imageUrl: "https://globalnexus.co.rw/images/Hello.png",
     content:
-      "Leverage AI to make better,faster decisions about NetOps, investments and growth.",
+      "NCC Education is a UK-based awarding body that provides internationally recognized qualifications",
   },
   {
     title: "ICT Chamber",
     imageUrl: "/assets/images/ictchamber.png",
     content:
-      "Leverage AI to make better,faster decisions about NetOps, investments and growth.",
+      "The ICT Chamber in Rwanda is a member-based organization focused on advancing (ICT) sector.",
   },
 ];
 
