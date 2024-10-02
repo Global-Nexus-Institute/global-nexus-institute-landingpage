@@ -12,6 +12,7 @@ import {
   LinkedinOutlined,
   XOutlined,
 } from "@ant-design/icons";
+import Copyright from "@/components/Copyright";
 
 export default function Home() {
   return (
@@ -27,23 +28,28 @@ export default function Home() {
         <TopMenu />
         <div className="h-[70%] px-10 flex flex-col justify-start items-start">
           <div className="text-[2rem] md:text-[6rem] font-bold bg-gradient-to-r bg-clip-text text-transparent from-gnblueLight to-gnpink">
-           Welcome to Global Nexus Institute<br />
-                  {/* Innovation & Excellence */}
+            Welcome to Global Nexus Institute
+            <br />
+            {/* Innovation & Excellence */}
           </div>
         </div>
 
-
         {/* Course section */}
         <section className="flex container mx-auto py-10 w-full">
-          <div className="flex flex-col space-y-100 items-center w-full" id="courses">
+          <div
+            className="flex flex-col space-y-100 items-center w-full"
+            id="courses"
+          >
             <div className="flex flex-col w-full space-y-10 container mx-auto px-8 md:px-16 lg:px-90">
               {/* <div className="w-[100%] mx-auto"> */}
-              <div className="flex h-auto justify-center bg-gradient-to-b from-gnpink to-gnpingdark p-8"> {/* Added padding for better spacing */}
+              <div className="flex h-auto justify-center bg-gradient-to-b from-gnpink to-gnpingdark p-8">
+                {" "}
+                {/* Added padding for better spacing */}
                 <div className="flex w-full justify-center md:items-center h-full text-[1.5rem] md:text-[1.5rem] text-center text-white">
-                  Gain insights from industry leaders at Global Nexus Institute. Our
-                  expert-led sessions offer valuable knowledge in Data Science,
-                  Computer Basics, AI, and Cyber-Security. Enhance your skills and
-                  stay ahead in your field with us.
+                  Gain insights from industry leaders at Global Nexus Institute.
+                  Our expert-led sessions offer valuable knowledge in Data
+                  Science, Computer Basics, AI, and Cyber-Security. Enhance your
+                  skills and stay ahead in your field with us.
                   {/* skills for today's competitive job market. */}
                 </div>
               </div>
@@ -53,10 +59,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-
       </header>
       <main className="h-full flex flex-col ">
-
         <section>
           <div className="h-[400px] bg-gradient-to-r to-gndarkblue from-purple-900 my-10 mx-auto max-w-7xl px-8">
             {/* Carousel info section */}
@@ -68,21 +72,29 @@ export default function Home() {
           </div>
         </section>
 
-
         {/* Course section */}
         <section className="flex container mx-auto py-10 w-full">
-          <div className="flex flex-col space-y-100 items-center w-full" id="courses">
+          <div
+            className="flex flex-col space-y-100 items-center w-full"
+            id="courses"
+          >
             <div className="flex flex-col w-full space-y-10 container mx-auto px-8 md:px-16 lg:px-90">
-            {/* <div className="w-[100%] mx-auto"> */}
-              <h1 className="text-gnblueLight text-4xl">  {/* Centered the text */}
+              {/* <div className="w-[100%] mx-auto"> */}
+              <h1 className="text-gnblueLight text-4xl">
+                {" "}
+                {/* Centered the text */}
                 Our Featured Courses
               </h1>
-              <div className="flex h-auto justify-center bg-gradient-to-b from-gnpink to-gnpingdark p-8"> {/* Added padding for better spacing */}
+              <div className="flex h-auto justify-center bg-gradient-to-b from-gnpink to-gnpingdark p-8">
+                {" "}
+                {/* Added padding for better spacing */}
                 <div className="flex w-full justify-center md:items-center h-full text-[1.5rem] md:text-[1.5rem] text-center text-white">
-                  Global Nexus Institute offers practical courses in Data Science, Artificial Intelligence,
-                  Computer Basics, Cyber-Security, SQL for Data Analysis and Business Analytics,
-                  allowing students to learn through real-life simulations, gaining essential
-                  skills for today&apos;s competitive job market.
+                  Global Nexus Institute offers practical courses in Data
+                  Science, Artificial Intelligence, Computer Basics,
+                  Cyber-Security, SQL for Data Analysis and Business Analytics,
+                  allowing students to learn through real-life simulations,
+                  gaining essential skills for today&apos;s competitive job
+                  market.
                 </div>
               </div>
             </div>
@@ -103,7 +115,9 @@ export default function Home() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="h-[200px] mx-auto w-full max-w-screen-xl px-5"> {/* Centered with max-width and padding */}
+          <div className="h-[200px] mx-auto w-full max-w-screen-xl px-5">
+            {" "}
+            {/* Centered with max-width and padding */}
             {/* Carousel info section */}
             <div className="flex flex-col justify-center h-full">
               <div className="flex md:text-[2.5rem] font-bold bg-gradient-to-r bg-clip-text text-transparent from-white to-gnblueLight">
@@ -117,7 +131,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
 
         {/* Sponsors and Partners */}
         <section className="bg-gradient-to-b from-gnpink to-gndarkblue p-10">
@@ -238,99 +251,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <div className="text-white flex flex-col w-full bg-blue-900/10 mt-10">
-        <footer className="flex flex-col h-[300px] w-full mt-1"> {/* Reduced margin here */}
-          <div className="flex flex-col w-full h-full justify-center h-[20%]">
-            <div className="md:flex w-full">
-              <div className="flex pl-3 gap-4 w-full md:w-[90%]">
-                <div className="flex w-[50%] flex justify-center items-center mb-1"> {/* Reduced margin below logo */}
-                  <Image
-                    src="/assets/images/logo.png"
-                    width={"30%"}
-                    height={120}
-                    alt="logo"
-                    className="bg-gray-500 rounded-sm"
-                  />
-                </div>
-                <div className="flex w-[20%] flex-col">
-                  <div className="mb-3">With Global Nexus Institute</div>
-                  <div className="text-gray-500">Connect with future tech leaders</div>
-                  <div className="text-gray-500">Earn international certifications</div>
-                  <div className="text-gray-500">Master key tech skills of 21st C</div>
-                </div>
-                <div className="flex w-[10%] flex-col">
-                  <div className="mb-3">WHAT WE DO</div>
-                  <div className="text-gray-500">Training</div>
-                  <div className="text-gray-500">Consultancy</div>
-                  <div className="text-gray-500">Recent Trends</div>
-                </div>
-                <div className="flex w-[10%] flex-col">
-                  <div className="mb-3">COMPANY</div>
-                  <div className="text-gray-500">About Us</div>
-                  <div className="text-gray-500">Events</div>
-                  <div className="text-gray-500">Careers</div>
-                </div>
-                <div className="flex flex-col w-[15%] md:pr-5 ">
-                  <div className="mb-3">FOLLOW US ON SOCIAL MEDIA</div>
-                  <div className="flex space-x-2">
-                    <Link
-                      href={
-                        "https://www.facebook.com/profile.php?id=61560364154598 "
-                      }
-                      className="text-gray-500 text-2xl"
-                    >
-                      <FacebookOutlined />
-                    </Link>
-                    <Link
-                      href={
-                        "https://www.linkedin.com/company/global-nexus-institute/?viewAsMember=true "
-                      }
-                      className="text-gray-500 text-2xl"
-                    >
-                      <LinkedinOutlined />
-                    </Link>
-                    <Link
-                      href={"https://www.instagram.com/globalnexusinstitute/ "}
-                      className="text-gray-500 text-2xl"
-                    >
-                      <InstagramFilled />
-                    </Link>
-                    <Link
-                      href={"https://x.com/GlobalNexusInt"}
-                      className="text-gray-500 text-2xl"
-                    >
-                      <XOutlined />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="h-[25%] px-5 flex justify-center space-x-3 text-gndarkblue text-md font-bold px-3 items-center gap-3 overflow-x-auto">
-              <div className="flex p-1 text-white text-xs md:text-sm">
-                Email: info@globalnexus.co.rw
-              </div>
-              <div className="flex p-2 text-white text-xs md:text-sm">
-                Location: Norrsken, KN 78 St, Kigali, Rwanda
-              </div>
-              <div className="flex p-2 text-white text-xs md:text-sm">
-                Phone: +250787406140
-              </div>
-            </div>
-          </div>
-        </footer>
-      </div>
-      <div className="flex h-[100px] justify-center items-center bg-gradient-to-b from-gnpink to-gnpingdark text-white">
-        Copyright ©2024 All rights reserved by &nbsp;{" "}
-        <a
-          href={"https://globalnexusinstitute.illumidesk.com"}
-          className="underline"
-        >
-          {" "}
-          Global Nexus Institute Ltd
-        </a>
-      </div>
     </div>
   );
 }
