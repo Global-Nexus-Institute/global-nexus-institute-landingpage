@@ -6,6 +6,7 @@ import { AntdStyledComponentsProvider } from "@/providers/AntdStyledComponentsPr
 import Copyright from "@/components/Copyright";
 import Footer from "@/components/Footer";
 import TopMenu from "@/components/navigation/TopMenu";
+import { paypalClient } from "@/shared/constants";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
