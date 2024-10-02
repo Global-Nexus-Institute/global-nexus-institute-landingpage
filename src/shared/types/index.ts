@@ -8,6 +8,7 @@ export interface Course {
   student_count: number;
   activity_count: number;
   main_image: string;
+  cost?: number;
 }
 
 export interface TeamMembers {
