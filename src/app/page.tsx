@@ -98,7 +98,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center w-full">
+            <div className="flex container w-full">
               <CourseContainer />
             </div>
           </div>
@@ -133,12 +133,12 @@ export default function Home() {
         </section>
 
         {/* Sponsors and Partners */}
-        <section className="bg-gradient-to-b from-gnpink to-gndarkblue p-10">
+        <section className="bg-gradient-to-b from-gnpink to-gndarkblue h-[800px] flex items-center">
           <SponsorsPartners />
         </section>
 
         {/* Team section */}
-        <section>
+        <section className="max-h-[800px]">
           <div className="flex flex-col items-center" id="team">
             <h1 className="text-center text-gnblueLight text-4xl my-2">
               Our Team
@@ -170,14 +170,14 @@ export default function Home() {
         </section>
 
         {/* Testimonals */}
-        <section className="mt-5 ">
+        <section className="my-10 ">
           <div className=" items-center flex flex-col">
             <h1 className="text-center text-gnblueLight text-4xl">
               Recent Trends
             </h1>
             <div className="bg-overlay flex flex-col justify-center items-center md:flex-row md:items-center md:space-x-2 gap-2 h-[80%] w-[86%] mt-5">
               <div
-                className="flex flex-col pt-2 items-center w-80%] md:w-[45%] h-auto md:h-full bg-gnpinkdark bg-image overlay"
+                className="flex flex-col pt-2 items-center w-[80%] md:w-[45%] h-auto md:h-full bg-gnpinkdark bg-image overlay"
                 style={{
                   backgroundImage: `url(https://globalnexus.co.rw/images/hero_1.jpg)`,
                   backgroundSize: "cover",
