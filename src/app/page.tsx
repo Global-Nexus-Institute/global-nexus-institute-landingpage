@@ -143,7 +143,7 @@ export default function Home() {
             <h1 className="text-center text-gnblueLight text-4xl my-10">
               Our Team
             </h1>
-            <div className="md:grid md:grid-cols-4 gap-4 flex-col justify-center w-[79%]">
+            <div className="md:grid md:grid-cols-4 gap-4 flex-col justify-center w-[77%]">
               {teamMembers.map(({ names, profileImage, title }, index) => (
                 <div
                   key={index}
