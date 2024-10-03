@@ -32,7 +32,7 @@ export default function Footer() {
                   Earn international certifications
                 </div>
                 <div className="text-gray-500">
-                  Master key tech skills of 21st C
+                  Master key tech skills of 21st Century
                 </div>
               </div>
               <div className="flex w-[10%] flex-col">
