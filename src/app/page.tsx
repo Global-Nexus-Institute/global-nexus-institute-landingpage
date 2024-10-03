@@ -133,17 +133,17 @@ export default function Home() {
         </section>
 
         {/* Sponsors and Partners */}
-        <section className="bg-gradient-to-b from-gnpink to-gndarkblue h-[800px] flex items-center">
+        <section className="bg-gradient-to-b from-gnpink to-gndarkblue p-10">
           <SponsorsPartners />
         </section>
 
         {/* Team section */}
         <section className="max-h-[800px]">
           <div className="flex flex-col items-center" id="team">
-            <h1 className="text-center text-gnblueLight text-4xl my-2">
+            <h1 className="text-center text-gnblueLight text-4xl my-10">
               Our Team
             </h1>
-            <div className="md:grid md:grid-cols-4 gap-4 flex-col justify-center w-[85%]">
+            <div className="md:grid md:grid-cols-4 gap-4 flex-col justify-center w-[79%]">
               {teamMembers.map(({ names, profileImage, title }, index) => (
                 <div
                   key={index}
@@ -172,7 +172,7 @@ export default function Home() {
         {/* Testimonals */}
         <section className="my-10 ">
           <div className=" items-center flex flex-col">
-            <h1 className="text-center text-gnblueLight text-4xl">
+            <h1 className="text-center text-gnblueLight text-4xl my-10">
               Recent Trends
             </h1>
             <div className="bg-overlay flex flex-col justify-center items-center md:flex-row md:items-center md:space-x-2 gap-2 h-[80%] w-[86%] mt-5">

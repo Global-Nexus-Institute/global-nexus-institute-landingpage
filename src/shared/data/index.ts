@@ -7,6 +7,11 @@ export const teamMembers: TeamMembers[] = [
     profileImage: "https://globalnexus.co.rw/images/Theoneste.png",
   },
   {
+    names: "Francis Kipchoge Yego",
+    title: "Board Member",
+    profileImage: "/assets/images/francis.jpg",
+  },
+  {
     names: "Vedaste NYANDWI",
     title: "Data Science Instructor",
     profileImage: "https://globalnexus.co.rw/images/vedaste.png",
@@ -33,13 +38,8 @@ export const teamMembers: TeamMembers[] = [
   },
   {
     names: "Didier Ngamije",
-    title: "Data Analyst Instructor",
+    title: "Data Analytics Instructor",
     profileImage: "https://globalnexus.co.rw/images/ndamije.png",
-  },
-  {
-    names: "Francis Kipchoge Yego",
-    title: "Data Analyst Instructor",
-    profileImage: "/assets/images/francis.jpg",
   },
 ];
 
