@@ -9,7 +9,7 @@ import { Button } from "antd";
 export default function CourseContainer() {
   const [courses, setCourses] = useState<Course[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const coursesPerPage = 6;
+  const coursesPerPage = 8;
 
   useEffect(() => {
     // Simulate data fetching
@@ -57,7 +57,7 @@ export default function CourseContainer() {
         </div>
 
         {/* Courses Section */}
-        <div className="flex flex-col md:flex-row justify-center md:flex-wrap gap-1">
+        <div className="flex flex-col md:flex-row justify-center md:flex-wrap gap-2">
           {currentCourses.map((course: Course) => (
             <div className="flex h-[450px] card" key={course.uuid}>
               <CourseCard course={course} />

@@ -31,6 +31,11 @@ export const teamMembers: TeamMembers[] = [
     title: "Marketing Officer",
     profileImage: "	https://globalnexus.co.rw/images/Joiejosepha.jpeg",
   },
+  {
+    names: "Didier Ngamije",
+    title: "Data Analyst Instructor",
+    profileImage: "https://globalnexus.co.rw/images/ndamije.png",
+  },
 ];
 
 export const carouselData = [
