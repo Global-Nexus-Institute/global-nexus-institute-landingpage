@@ -78,7 +78,7 @@ const TopMenu: React.FC = () => {
         zIndex: 1,
         width: "100%",
         display: "flex",
-        height: "12%",
+        height: "20%",
         alignItems: "center",
         justifyContent: "space-between",
         // backgroundColor: "transparent",
@@ -87,14 +87,14 @@ const TopMenu: React.FC = () => {
       className="px-0"
     >
       <div
-        className="logo h-[60px] flex justify-center items-center  bg-contain bg-gray-500/20"
+        className="logo h-[80px] flex justify-center items-center  bg-contain bg-gray-500/20"
         style={{
           // backgroundImage: `url(/assets/images/logo.png)`,
           backgroundColor: "white",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <Image src="/assets/images/logo.png" alt="logo" height={60} />
+        <Image src="/assets/images/logo.png" alt="logo" height={80} />
       </div>
       <Menu
         theme="dark"
