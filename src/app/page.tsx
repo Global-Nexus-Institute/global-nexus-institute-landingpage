@@ -19,14 +19,14 @@ export default function Home() {
     <div className="w-full">
       <TopMenu />
       <header
-        className="h-[100vh] w-full bg-cover overlay bg-gndarkblue"
+        className="h-[93vh] w-full flex flex-col justify-between items-center bg-cover bg-center bg-no-repeat  overlay bg-gndarkblue"
         style={{
           backgroundImage: `url(/assets/images/bgimage.jpg)`,
           backgroundBlendMode: "overlay",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
-        
         <div className="h-[70%] px-10 flex flex-col justify-start items-start">
           <div className="text-[2rem] md:text-[6rem] font-bold bg-gradient-to-r bg-clip-text text-transparent from-gnblueLight to-gnpink">
             Welcome to Global Nexus Institute
@@ -35,32 +35,20 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Course section */}
-        <section className="flex container mx-auto py-10 w-full">
-          <div
-            className="flex flex-col space-y-100 items-center w-full"
-            id="courses"
-          >
-            <div className="flex flex-col w-full space-y-10 container mx-auto px-8 md:px-16 lg:px-90">
-              {/* <div className="w-[100%] mx-auto"> */}
-              <div className="flex h-auto justify-center bg-gradient-to-b from-gnpink to-gnpingdark p-8">
-                {" "}
-                {/* Added padding for better spacing */}
-                <div className="flex w-full justify-center md:items-center h-full text-[1.5rem] md:text-[1.5rem] text-center text-white">
-                  Gain insights from industry leaders at Global Nexus Institute.
-                  Our expert-led sessions offer valuable knowledge in Data
-                  Science, Computer Basics, AI, and Cyber-Security. Enhance your
-                  skills and stay ahead in your field with us.
-                  {/* skills for today's competitive job market. */}
-                </div>
-              </div>
-            </div>
-            <div className="flex justify-center w-full">
-              {/* <CourseContainer /> */}
-            </div>
+        {/* base section */}
+        <div className="flex h-[20%] bg-gradient-to-b from-gnpink to-gnpingdark  container mx-auto px-8 md:px-16 lg:px-90">
+          {" "}
+          {/* Added padding for better spacing */}
+          <div className="flex w-full justify-center md:items-center h-full text-[1.5rem] md:text-[1.5rem] text-center text-white ">
+            Gain insights from industry leaders at Global Nexus Institute. Our
+            expert-led sessions offer valuable knowledge in Data Science,
+            Computer Basics, AI, and Cyber-Security. Enhance your skills and
+            stay ahead in your field with us.
+            {/* skills for today's competitive job market. */}
           </div>
-        </section>
+        </div>
       </header>
+
       <main className="h-full flex flex-col ">
         <section>
           <div className="h-[400px] bg-gradient-to-r to-gndarkblue from-purple-900 my-10 mx-auto max-w-7xl px-8">
