@@ -4,7 +4,7 @@ import { SponsorsPartnerCard } from "./SponsorsPartnerCard";
 
 export const SponsorsPartners = () => {
   return (
-    <div className="flex flex-col w-full space-y-10  md:w-[88%]">
+    <div className="flex flex-col w-full space-y-10  md:w-[88%] border">
       <h1 className="text-gnblueLight text-4xl">Our Partners and Sponsors</h1>
 
       <div className="flex h-[30%] w-full  bg-gradient-to-b from-gnpink to-gnpingdark">
