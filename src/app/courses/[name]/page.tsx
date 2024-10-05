@@ -41,7 +41,7 @@ const Course: React.FC = () => {
             onApprove: (data: any, actions: any) => {
               return actions.order.capture().then((details: any) => {
                 const orderID = details.id;
-                const userID = "USER_ID"; // Replace with actual user ID
+                // const userID = "sb-sjfnx5772473@personal.example.com"; // Replace with actual user ID
 
                 // Verify payment on the server
                 fetch("http://localhost:5000/verify-payment", {
@@ -49,7 +49,7 @@ const Course: React.FC = () => {
                   headers: {
                     "Content-Type": "application/json",
                   },
-                  body: JSON.stringify({ orderID, userID }),
+                  body: JSON.stringify({ orderID }),
                 })
                   .then((response) => response.json())
                   .then((data) => {
