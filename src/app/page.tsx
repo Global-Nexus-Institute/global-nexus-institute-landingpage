@@ -62,7 +62,7 @@ export default function Home() {
         </section>
 
         {/* Course section */}
-        <section className="flex  mx-auto py-10 w-[85%] border">
+        <section className="flex  mx-auto py-10 w-[85%]">
           <div
             className="flex flex-col space-y-100 items-center w-full"
             id="courses"
@@ -108,7 +108,7 @@ export default function Home() {
             {" "}
             {/* Centered with max-width and padding */}
             {/* Carousel info section */}
-            <div className="flex flex-col justify-center h-full md:w-[80%] border">
+            <div className="flex flex-col justify-center h-full md:w-[80%]">
               <div className="flex md:text-[2.5rem] font-bold bg-gradient-to-r bg-clip-text text-transparent from-white to-gnblueLight">
                 Why is data compared to oil as the key resource for the future?
               </div>
@@ -127,12 +127,12 @@ export default function Home() {
         </section>
 
         {/* Team section */}
-        <section className="max-h-[800px] overflow-y-scroll scrollbar-hidden border">
+        <section className="max-h-[800px] overflow-y-scroll scrollbar-hidden">
           <div className="flex flex-col items-center" id="team">
             <h1 className="text-center text-gnblueLight text-4xl my-10">
               Our Team
             </h1>
-            <div className="md:grid md:grid-cols-4 gap-4 flex-col justify-center w-[77%] border">
+            <div className="md:grid md:grid-cols-4 gap-4 flex-col justify-center w-[77%]">
               {teamMembers.map(({ names, profileImage, title }, index) => (
                 <div
                   key={index}
