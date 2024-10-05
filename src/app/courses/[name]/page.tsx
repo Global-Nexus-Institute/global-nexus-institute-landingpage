@@ -44,7 +44,7 @@ const Course: React.FC = () => {
                 const userID = "USER_ID"; // Replace with actual user ID
 
                 // Verify payment on the server
-                fetch("/verify-payment", {
+                fetch("http://localhost:5000/verify-payment", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
@@ -117,7 +117,7 @@ const Course: React.FC = () => {
           />
         </div>
       </div>
-      <Modal open={openModal} width={600} onCancel={closeModal} >
+      <Modal open={openModal} width={600} onCancel={closeModal}>
         <div>
           <div>Make Payment</div>
           <div id="paypal-button-container"></div>

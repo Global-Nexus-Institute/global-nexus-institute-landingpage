@@ -17,6 +17,7 @@ import Copyright from "@/components/Copyright";
 export default function Home() {
   return (
     <div className="w-full">
+      <TopMenu />
       <header
         className="h-[100vh] w-full bg-cover overlay bg-gndarkblue"
         style={{
@@ -25,7 +26,7 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-        <TopMenu />
+        
         <div className="h-[70%] px-10 flex flex-col justify-start items-start">
           <div className="text-[2rem] md:text-[6rem] font-bold bg-gradient-to-r bg-clip-text text-transparent from-gnblueLight to-gnpink">
             Welcome to Global Nexus Institute

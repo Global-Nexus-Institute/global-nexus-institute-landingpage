@@ -73,27 +73,29 @@ const TopMenu: React.FC = () => {
     <Layout.Header
       style={{
         position: "sticky",
-        paddingTop: 10,
+        paddingTop: 5,
         top: 0,
         zIndex: 1,
         width: "100%",
         display: "flex",
-        height: "15%",
+        height: "12%",
         alignItems: "center",
         justifyContent: "space-between",
-        backgroundColor: "transparent",
+        // backgroundColor: "transparent",
         color: "white",
       }}
       className="px-0"
     >
       <div
-        className="logo w-[10%] h-[100%] flex justify-center items-center  bg-contain bg-gray-500/20"
+        className="logo h-[60px] flex justify-center items-center  bg-contain bg-gray-500/20"
         style={{
-          backgroundImage: `url(/assets/images/logo.png)`,
-          // backgroundColor: "white",
+          // backgroundImage: `url(/assets/images/logo.png)`,
+          backgroundColor: "white",
           backgroundRepeat: "no-repeat",
         }}
-      />
+      >
+        <Image src="/assets/images/logo.png" alt="logo" height={60} />
+      </div>
       <Menu
         theme="dark"
         style={{
@@ -103,11 +105,12 @@ const TopMenu: React.FC = () => {
           justifyContent: "center",
           color: "white",
           background: "transparent",
+          fontWeight: "bold",
         }}
         mode="horizontal"
         items={items}
       />
-      <div className="flex px-2 rounded-lg text-md justify-center items-center bg-gray-500/10">
+      <div className="flex px-2 h-[40px] cursor-pointer rounded-lg text-sm justify-center items-center bg-gray-500/10">
         Contact Us
       </div>
     </Layout.Header>
