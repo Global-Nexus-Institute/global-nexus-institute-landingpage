@@ -62,7 +62,7 @@ const Course: React.FC = () => {
               });
             },
           })
-          .render("#paypal-button-container");
+          .render("#paypal-button-");
       });
       document.body.appendChild(script);
     }
@@ -120,7 +120,7 @@ const Course: React.FC = () => {
       <Modal open={openModal} width={600} onCancel={closeModal}>
         <div>
           <div>Make Payment</div>
-          <div id="paypal-button-container"></div>
+          <div id="paypal-button-"></div>
         </div>
       </Modal>
     </>

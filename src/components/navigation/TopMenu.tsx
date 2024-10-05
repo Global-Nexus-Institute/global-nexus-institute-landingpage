@@ -81,7 +81,6 @@ const TopMenu: React.FC = () => {
         height: "20%",
         alignItems: "center",
         justifyContent: "space-between",
-        // backgroundColor: "transparent",
         color: "white",
       }}
       className="px-0"

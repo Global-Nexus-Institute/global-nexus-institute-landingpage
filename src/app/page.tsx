@@ -16,7 +16,7 @@ import Copyright from "@/components/Copyright";
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       <TopMenu />
       <header
         className="h-[93vh] w-full flex flex-col justify-between items-center bg-cover bg-center bg-no-repeat  overlay bg-gndarkblue"
@@ -36,10 +36,10 @@ export default function Home() {
         </div>
 
         {/* base section */}
-        <div className="flex h-[20%] bg-gradient-to-b from-gnpink to-gnpingdark  container mx-auto px-8 md:px-16 lg:px-90">
+        <div className="flex h-[20%] bg-gradient-to-b from-gnpink to-gnpingdark  mx-auto px-8 md:px-16 lg:px-90">
           {" "}
           {/* Added padding for better spacing */}
-          <div className="flex w-full justify-center md:items-center h-full text-[1.5rem] md:text-[1.5rem] text-center text-white ">
+          <div className="flex w-full justify-center items-center h-full text-[0.8rem] md:text-[1.5rem] text-center text-white ">
             Gain insights from industry leaders at Global Nexus Institute. Our
             expert-led sessions offer valuable knowledge in Data Science,
             Computer Basics, AI, and Cyber-Security. Enhance your skills and
@@ -62,13 +62,13 @@ export default function Home() {
         </section>
 
         {/* Course section */}
-        <section className="flex container mx-auto py-10 w-full">
+        <section className="flex  mx-auto py-10 w-full">
           <div
             className="flex flex-col space-y-100 items-center w-full"
             id="courses"
           >
-            <div className="flex flex-col w-full space-y-10 container mx-auto px-8 md:px-16 lg:px-90">
-              {/* <div className="w-[100%] mx-auto"> */}
+            <div className="flex flex-col w-full space-y-10  mx-auto px-8 md:px-16 lg:px-90">
+              {/* <div className="w-full mx-auto"> */}
               <h1 className="text-gnblueLight text-4xl">
                 {" "}
                 {/* Centered the text */}
@@ -77,7 +77,7 @@ export default function Home() {
               <div className="flex h-auto justify-center bg-gradient-to-b from-gnpink to-gnpingdark p-8">
                 {" "}
                 {/* Added padding for better spacing */}
-                <div className="flex w-full justify-center md:items-center h-full text-[1.5rem] md:text-[1.5rem] text-center text-white">
+                <div className="flex w-full justify-center items-center h-full text-[1rem] md:text-[1.5rem] text-center text-white">
                   Global Nexus Institute offers practical courses in Data
                   Science, Artificial Intelligence, Computer Basics,
                   Cyber-Security, SQL for Data Analysis and Business Analytics,
@@ -87,7 +87,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex container w-full">
+            <div className="flex  w-full">
               <CourseContainer />
             </div>
           </div>
@@ -104,16 +104,16 @@ export default function Home() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="h-[200px] mx-auto w-full max-w-screen-xl px-5">
+          <div className="h-[200px] mx-auto w-full px-5">
             {" "}
             {/* Centered with max-width and padding */}
             {/* Carousel info section */}
-            <div className="flex flex-col justify-center h-full">
+            <div className="flex flex-col justify-center h-full md:px-20">
               <div className="flex md:text-[2.5rem] font-bold bg-gradient-to-r bg-clip-text text-transparent from-white to-gnblueLight">
                 Why is data compared to oil as the key resource for the future?
               </div>
-              <div className="w-auto md:text-xl text-white mt-4">
-                <span className="border p-3">
+              <div className="w-auto border md:border-none md:text-xl text-sm text-white mt-4">
+                <span className="md:border p-3">
                   Global Nexus Institute Values: Innovation & Excellence{" "}
                 </span>
               </div>
@@ -127,7 +127,7 @@ export default function Home() {
         </section>
 
         {/* Team section */}
-        <section className="max-h-[800px]">
+        <section className="max-h-[800px] overflow-y-scroll scrollbar-hidden">
           <div className="flex flex-col items-center" id="team">
             <h1 className="text-center text-gnblueLight text-4xl my-10">
               Our Team
@@ -183,7 +183,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="my-5 text-2xl text-white">Samuelson MUKIZA</div>
-                <div className="flex px-3 w- text-white text-center justify-center italic text-2xl py-3">
+                <div className="flex px-3  text-white text-center justify-center italic text-2xl py-3">
                   &lsquo;&lsquo; I am excited to have completed the Python for
                   Data Science course at Global Nexus Institute, gaining
                   invaluable skills. I highly recommend this course to anyone
