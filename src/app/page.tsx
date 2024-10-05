@@ -62,7 +62,7 @@ export default function Home() {
         </section>
 
         {/* Course section */}
-        <section className="flex  mx-auto py-10 w-full">
+        <section className="flex  mx-auto py-10 w-[85%]">
           <div
             className="flex flex-col space-y-100 items-center w-full"
             id="courses"
@@ -122,7 +122,7 @@ export default function Home() {
         </section>
 
         {/* Sponsors and Partners */}
-        <section className="bg-gradient-to-b from-gnpink to-gndarkblue p-10">
+        <section className="bg-gradient-to-b from-gnpink to-gndarkblue p-20">
           <SponsorsPartners />
         </section>
 
