@@ -32,7 +32,7 @@ const Course: React.FC = () => {
                 purchase_units: [
                   {
                     amount: {
-                      value: details?.cost, // Replace with actual course price
+                      value: details?.cost,
                     },
                   },
                 ],
