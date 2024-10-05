@@ -13,7 +13,7 @@ export const SponsorsPartnerCard: React.FC<CardProps> = ({ data }) => {
           src={data.imageUrl}
           preview={false}
           width={170}
-          height={100}
+          height={130}
           className="bg-white"
           alt="sponsor_logo"
         />
