@@ -36,10 +36,10 @@ export default function Home() {
         </div>
 
         {/* base section */}
-        <div className="flex h-[20%] bg-gradient-to-b from-gnpink to-gnpingdark  mx-auto px-8 md:px-16 lg:px-90">
+        <div className="flex h-[20%] w-full bg-gradient-to-b from-gnpink to-gnpingdark  justify-center items-center">
           {" "}
           {/* Added padding for better spacing */}
-          <div className="flex w-full justify-center items-center h-full text-[0.8rem] md:text-[1.5rem] text-center text-white ">
+          <div className="flex md:w-[77.5%] justify-center items-center h-full text-[0.8rem] md:text-[1.5rem] text-center text-white ">
             Gain insights from industry leaders at Global Nexus Institute. Our
             expert-led sessions offer valuable knowledge in Data Science,
             Computer Basics, AI, and Cyber-Security. Enhance your skills and
@@ -104,11 +104,11 @@ export default function Home() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="h-[200px] mx-auto w-full px-5">
+          <div className="flex justify-center h-[200px] mx-auto w-full px-5">
             {" "}
             {/* Centered with max-width and padding */}
             {/* Carousel info section */}
-            <div className="flex flex-col justify-center h-full md:px-20">
+            <div className="flex flex-col justify-center h-full md:w-[80%] ">
               <div className="flex md:text-[2.5rem] font-bold bg-gradient-to-r bg-clip-text text-transparent from-white to-gnblueLight">
                 Why is data compared to oil as the key resource for the future?
               </div>
@@ -122,7 +122,7 @@ export default function Home() {
         </section>
 
         {/* Sponsors and Partners */}
-        <section className="bg-gradient-to-b from-gnpink to-gndarkblue p-20">
+        <section className="flex justify-center w-full bg-gradient-to-b from-gnpink to-gndarkblue p-10 md:p-20">
           <SponsorsPartners />
         </section>
 
