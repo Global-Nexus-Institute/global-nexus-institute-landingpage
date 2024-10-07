@@ -1,0 +1,128 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #004d99;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.4em; /* Adjusted for better readability */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.training-info,
+.apply-form {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.training-info h2,
+.apply-form h2 {
+  color: #004d99;
+  font-size: 1.9em; /* Adjusted for better readability */
+}
+
+.job-info,
+.apply-form {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.job-info h2,
+.apply-form h2 {
+  color: #004d99;
+  font-size: 1.9em; /* Adjusted for better readability */
+}
+
+.apply-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.apply-form input,
+.apply-form textarea,
+.apply-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+.apply-form button {
+  background-color: #004d99;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.apply-form button:hover {
+  background-color: #003366;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #004d99;
+  color: #fff;
+  position: relative; /* Changed to relative for better footer positioning */
+  width: 100%;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.5em; /* Reduced font size for smaller screens */
+  }
+
+  .job-info h2,
+  .apply-form h2 {
+    font-size: 1.2em; /* Reduced font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .apply-form button {
+    padding: 10px; /* Adjust button padding for smaller screens */
+    font-size: 14px; /* Adjust button font size */
+  }
+
+  .apply-form input,
+  .apply-form textarea,
+  .apply-form select {
+    padding: 8px; /* Adjust padding for smaller inputs */
+  }
+
+  footer {
+    font-size: 14px; /* Adjust footer font size for better readability */
+  }
+}
