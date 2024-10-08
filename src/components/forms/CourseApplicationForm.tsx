@@ -129,13 +129,13 @@ export default function CourseApplicationForm() {
           </form>
         </section>
       </div>
-      <footer>
+      <div className=".apply-footer">
         &copy; 2024 Global Nexus Institute |{" "}
         <a href="mailto:info@globalnexus.co.rw" style={{ color: " #fff" }}>
           Contact Us
         </a>{" "}
         | Call: +250 787 406 140
-      </footer>
+      </div>
     </div>
   );
 }
