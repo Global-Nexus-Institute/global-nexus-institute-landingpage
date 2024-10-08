@@ -1,9 +1,11 @@
 import React from "react";
 import "./form-styles.css";
+import TopMenu from "../navigation/TopMenu";
 
 export default function JobApplicationForm() {
   return (
     <div className="w-full">
+      
       <header>
         <h1>Global Nexus Institute Job Application</h1>
       </header>
@@ -118,14 +120,6 @@ export default function JobApplicationForm() {
             <button type="submit">Submit Application</button>
           </form>
         </section>
-      </div>
-
-      <div  className=".apply-footer">
-        &copy; 2024 Global Nexus Institute |{" "}
-        <a href="mailto:info@globalnexus.co.rw" style={{ color: "#fff" }}>
-          Contact Us
-        </a>{" "}
-        | Call: +250 787 406 140
       </div>
     </div>
   );
