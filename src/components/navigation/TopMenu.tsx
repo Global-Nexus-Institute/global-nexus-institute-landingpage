@@ -72,9 +72,9 @@ const TopMenu: React.FC = () => {
           key: "apply3",
           label: (
             <Link
-              href={"#"}
+              href={"/apply/course"}
               onClick={() => {
-                setTrainingModalOpen(true);
+                // setTrainingModalOpen(true);
               }}
             >
               Training Application
@@ -86,9 +86,9 @@ const TopMenu: React.FC = () => {
           key: "apply4",
           label: (
             <Link
-              href={"#"}
+              href={"/apply/job"}
               onClick={() => {
-                setJobModalOpen(true);
+                // setJobModalOpen(true);
               }}
             >
               Job Application
