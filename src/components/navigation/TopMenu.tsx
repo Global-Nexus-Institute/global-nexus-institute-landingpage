@@ -10,16 +10,18 @@ import Link from "next/link";
 import CourseApplicationForm from "../forms/CourseApplicationForm";
 import JobApplicationForm from "../forms/JobApplicationForm";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
 const TopMenu: React.FC = () => {
+  const router = useRouter();
   const [isTrainingModalOpen, setTrainingModalOpen] = useState(false);
   const [isJobModalOpen, setJobModalOpen] = useState(false);
 
   const items: MenuItem[] = [
     {
-      label: "Home",
+      label: <Link href={"/"}>Home</Link>,
       key: "home",
       icon: <HomeOutlined />,
     },
@@ -122,14 +124,20 @@ const TopMenu: React.FC = () => {
         className="px-0"
       >
         <div
-          className="logo h-[80px] flex justify-center items-center  bg-contain bg-gray-500/20"
+          className="logo h-[80px] flex justify-center items-center  bg-contain bg-gray-500/20 cursor-pointer"
           style={{
             // backgroundImage: `url(/assets/images/logo.png)`,
             backgroundColor: "white",
             backgroundRepeat: "no-repeat",
           }}
+          onClick={() => router.replace("/")}
         >
-          <Image src="/assets/images/logo.png" alt="logo" height={80} />
+          <Image
+            src="/assets/images/logo.png"
+            alt="logo"
+            height={80}
+            preview={false}
+          />
         </div>
         <Menu
           theme="dark"
