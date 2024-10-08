@@ -70,21 +70,6 @@ const Course: React.FC = () => {
   return (
     <>
       <div>
-        <div className="w-full flex bg-white h-[80px] ">
-          <div className="pl-3 h-full w-[100px] flex justify-center items-center">
-            <Link href={"/#courses"} onClick={() => router.replace("/")}>
-              <Image
-                src="/assets/images/logo.png"
-                alt="logo"
-                className="h-full w-[60px]"
-                preview={false}
-              />
-            </Link>
-          </div>
-          <div className="flex justify-center items-center self-center w-full">
-            Navs
-          </div>
-        </div>
         <div className="flex h-[400px] w-full bg-gradient-to-r from-gndarkblue to-blue-900 ">
           <div className="pl-3 h-full flex flex-col justify-center basis-1/2">
             <div className="space-y-4">
