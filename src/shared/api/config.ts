@@ -10,6 +10,17 @@ export const backend = axios.create({
   },
 });
 
+export const paymentApi = axios.create({
+  baseURL: baseEndpoint,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+
 export const endpoints = {
   courses: "/courses/",
+  paypal: {
+    createOrder: "/payments/pay",
+    captureOrder: "/payments/execute-payment",
+  },
 };
