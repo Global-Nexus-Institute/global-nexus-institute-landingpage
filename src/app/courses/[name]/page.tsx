@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { Image, Modal } from "antd";
 import React, { useEffect, useState } from "react";
 import { paypalClient } from "@/shared/constants";
+import Payment from "@/components/payments/paypal-button/PayPal";
 
 const Course: React.FC = () => {
   const [openModal, setModalOpen] = useState(false);
@@ -44,7 +45,7 @@ const Course: React.FC = () => {
                 // const userID = "sb-sjfnx5772473@personal.example.com"; // Replace with actual user ID
 
                 // Verify payment on the server
-                fetch("http://localhost:5000/verify-payment", {
+                fetch("http://localhost:5000/payments/verify-payment", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
@@ -82,6 +83,9 @@ const Course: React.FC = () => {
                 >
                   Enroll now
                 </button>
+                <div>
+                  <Payment amount={details?.cost ?? 0} name={details?.name ?? ""} slug={details?.slug ?? ""} />
+                </div>
                 <div className="flex  items-center justify-center bg-blue-900 text-white px-3 py-1 rounded-md w-[100px] h-[50px]">
                   <Link
                     href={`https://globalnexusinstitute.illumidesk.com/courses/${details?.slug}`}
@@ -90,6 +94,7 @@ const Course: React.FC = () => {
                     Explore
                   </Link>
                 </div>
+
               </div>
             </div>
           </div>
