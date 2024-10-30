@@ -9,6 +9,7 @@ import Payment from "@/components/payments/paypal-button/PayPal";
 
 const Course: React.FC = () => {
   const [openModal, setModalOpen] = useState(false);
+  const endpoint = process.env.NEXT_PUBLIC_API_ENDPOINT;
   const pathname = usePathname();
   const router = useRouter();
   console.log(pathname);
@@ -19,6 +20,7 @@ const Course: React.FC = () => {
   const closeModal = () => {
     setModalOpen(false);
   };
+
 
   useEffect(() => {
     // Load PayPal script
@@ -45,7 +47,7 @@ const Course: React.FC = () => {
                 // const userID = "sb-sjfnx5772473@personal.example.com"; // Replace with actual user ID
 
                 // Verify payment on the server
-                fetch("http://localhost:5000/payments/verify-payment", {
+                fetch(`${endpoint}/payments/verify-payment`, {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",

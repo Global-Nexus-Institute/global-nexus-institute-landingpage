@@ -38,7 +38,8 @@ const PaymentWrapper = ({
       //   body: JSON.stringify({ amount, name, slug }),
       // });
       const data = await response.data;
-      return data.token;
+      console.log("data ", data);
+      return data.orderID;
     } catch (error) {
       console.log("Error creating order: ", error);
       throw error;
@@ -49,11 +50,12 @@ const PaymentWrapper = ({
     // const response = await capturePaymentOrder({
     //   orderID: data.orderID,
     // });
-    try{
+    try {
       const response = await executePaymentOrder({
         paymentID: data.paymentID,
         payerID: data.payerID,
-      })
+        orderID: data.orderID,
+      });
       // const response = await fetch(
       //   "http://localhost:5000/payments/execute-payment",
       //   {
@@ -67,16 +69,16 @@ const PaymentWrapper = ({
       //     }),
       //   },
       // );
+      console.log("response ", response);
       const results = await response.data;
       if (results.status === "Payment success") {
         alert("Payment successful!");
         // save to database
       }
-    } catch(err){
+    } catch (err) {
       console.log("Error: ", err);
       alert("Payment failed or already processed!: " + err);
     }
-    
   };
 
   if (isPending) return <div>Loading PayPal SDK...</div>;

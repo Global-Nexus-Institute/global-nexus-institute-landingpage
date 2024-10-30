@@ -14,8 +14,10 @@ export const createPaymentOrder = (data: {
 export const executePaymentOrder = async (data: {
   paymentID: string;
   payerID: string;
+  orderID: string;
 }) =>
   paymentApi.post(endpoints.paypal.captureOrder, {
     paymentID: data.paymentID,
     payerID: data.payerID,
+    orderID: data.orderID,
   });

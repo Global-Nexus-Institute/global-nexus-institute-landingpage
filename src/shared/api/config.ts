@@ -20,7 +20,7 @@ export const paymentApi = axios.create({
 export const endpoints = {
   courses: "/courses/",
   paypal: {
-    createOrder: "/payments/pay",
-    captureOrder: "/payments/execute-payment",
+    createOrder: "/payments/create-payment",
+    captureOrder: "/payments/capture-payment",
   },
 };
