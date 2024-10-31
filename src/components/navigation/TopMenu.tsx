@@ -4,18 +4,27 @@ import {
   MoneyCollectFilled,
   FormOutlined,
   EditOutlined,
+  UserOutlined,
+  PhoneFilled,
 } from "@ant-design/icons";
-import { Image, Layout, Menu, MenuProps, Modal } from "antd";
+import { Avatar, Button, Image, Layout, Menu, MenuProps, Modal } from "antd";
 import Link from "next/link";
 import CourseApplicationForm from "../forms/CourseApplicationForm";
 import JobApplicationForm from "../forms/JobApplicationForm";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { RootState } from "@/lib/store/store";
+import { useAppSelector } from "@/lib/store/store.hooks";
+import { useAuth } from "@/shared/hooks/auth/auth.hooks";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
 const TopMenu: React.FC = () => {
   const router = useRouter();
+  const { logOutUser } = useAuth();
+  const { user, loading, error, successMesage } = useAppSelector(
+    (store: RootState) => store.auth,
+  );
   const [isTrainingModalOpen, setTrainingModalOpen] = useState(false);
   const [isJobModalOpen, setJobModalOpen] = useState(false);
 
@@ -105,6 +114,11 @@ const TopMenu: React.FC = () => {
       key: "donate",
       icon: <MoneyCollectFilled />,
     },
+    {
+      label: <Link href={"#"}>Contact Us</Link>,
+      key: "contact",
+      icon: <PhoneFilled />,
+    },
   ];
   return (
     <>
@@ -153,9 +167,31 @@ const TopMenu: React.FC = () => {
           mode="horizontal"
           items={items}
         />
-        <div className="flex px-2 h-[40px] cursor-pointer rounded-lg text-sm justify-center items-center bg-gray-500/10">
-          Contact Us
-        </div>
+
+        {user == null ? (
+          <div className="flex px-2 h-[40px] cursor-pointer rounded-lg text-sm justify-center items-center bg-gray-500/10">
+            <Button
+              type="text"
+              style={{ color: "white" }}
+              onClick={() => router.push("/auth/login")}
+            >
+              Login
+            </Button>
+          </div>
+        ) : (
+          <div className="flex px-2 h-[40px] cursor-pointer rounded-lg text-sm justify-center items-center bg-gray-500/10">
+            <Avatar size="large" icon={<UserOutlined />} />{" "}
+            <span>
+              <Button
+                type="text"
+                style={{ color: "white" }}
+                onClick={() => logOutUser()}
+              >
+                Logout
+              </Button>{" "}
+            </span>
+          </div>
+        )}
       </Layout.Header>
       <Modal
         open={isTrainingModalOpen}

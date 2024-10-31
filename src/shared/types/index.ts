@@ -22,3 +22,41 @@ export interface SponsorsPartners{
   imageUrl: string;
   content: string;
 }
+
+export type UserCreateType = {
+  name: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  role: string;
+  phoneNumber: string;
+  profileImage?: string;
+  courses?: string[];
+  address?: {
+    city: string;
+    country: string;
+    streetAddress?: string;
+    zipCode?: string;
+  };
+};
+
+export type UsersDataType = {
+  _id: string;
+  id: number;
+  names: string;
+  firstName: string;
+  lastName: string
+  email: string;
+  role: string;
+  address?:{
+    city: string;
+    country: string;
+    streetAddress?: string;
+    zipCode?: string;
+  }
+  courses?: Course[] | [];
+  createdAt: string;
+  updatedAt: string;
+};
+

@@ -4,11 +4,13 @@ export const createPaymentOrder = (data: {
   amount: number;
   slug: string;
   name: string;
+  courseId: string;
 }) =>
   paymentApi.post(endpoints.paypal.createOrder, {
     amount: data.amount,
     slug: data.slug,
     name: data.name,
+    courseId: data.courseId,
   });
 
 export const executePaymentOrder = async (data: {

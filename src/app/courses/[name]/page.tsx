@@ -6,6 +6,8 @@ import { Image, Modal } from "antd";
 import React, { useEffect, useState } from "react";
 import { paypalClient } from "@/shared/constants";
 import Payment from "@/components/payments/paypal-button/PayPal";
+import { useAppSelector } from "@/lib/store/store.hooks";
+import { RootState } from "@/lib/store/store";
 
 const Course: React.FC = () => {
   const [openModal, setModalOpen] = useState(false);
@@ -17,59 +19,8 @@ const Course: React.FC = () => {
     (course) => course.slug === pathname.split("/")[2],
   );
 
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+  const {user} = useAppSelector((store: RootState) => store.auth);
 
-
-  useEffect(() => {
-    // Load PayPal script
-    if (openModal) {
-      const script = document.createElement("script");
-      script.src = `https://www.paypal.com/sdk/js?client-id=${paypalClient}`;
-      script.addEventListener("load", () => {
-        window.paypal
-          .Buttons({
-            createOrder: (data: any, actions: any) => {
-              return actions.order.create({
-                purchase_units: [
-                  {
-                    amount: {
-                      value: details?.cost,
-                    },
-                  },
-                ],
-              });
-            },
-            onApprove: (data: any, actions: any) => {
-              return actions.order.capture().then((details: any) => {
-                const orderID = details.id;
-                // const userID = "sb-sjfnx5772473@personal.example.com"; // Replace with actual user ID
-
-                // Verify payment on the server
-                fetch(`${endpoint}/payments/verify-payment`, {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify({ orderID }),
-                })
-                  .then((response) => response.json())
-                  .then((data) => {
-                    if (data.status === "success") {
-                      alert("Payment successful!");
-                    } else {
-                      alert("Payment failed or already processed.");
-                    }
-                  });
-              });
-            },
-          })
-          .render("#paypal-button-");
-      });
-      document.body.appendChild(script);
-    }
-  }, [pathname, openModal]);
   return (
     <>
       <div>
@@ -86,7 +37,7 @@ const Course: React.FC = () => {
                   Enroll now
                 </button>
                 <div>
-                  <Payment amount={details?.cost ?? 0} name={details?.name ?? ""} slug={details?.slug ?? ""} />
+                  <Payment amount={details?.cost ?? 0} name={details?.name ?? ""} slug={details?.slug ?? ""} courseId={details?.uuid ?? ""} />
                 </div>
                 <div className="flex  items-center justify-center bg-blue-900 text-white px-3 py-1 rounded-md w-[100px] h-[50px]">
                   <Link
@@ -109,12 +60,7 @@ const Course: React.FC = () => {
           />
         </div>
       </div>
-      <Modal open={openModal} width={600} onCancel={closeModal}>
-        <div>
-          <div>Make Payment</div>
-          <div id="paypal-button-"></div>
-        </div>
-      </Modal>
+
     </>
   );
 };

@@ -10,33 +10,37 @@ import {
   PayPalScriptProvider,
   usePayPalScriptReducer,
 } from "@paypal/react-paypal-js";
+import { useAppSelector } from "@/lib/store/store.hooks";
+import { RootState } from "@/lib/store/store";
+import { useRouter } from "next/navigation";
 
 const PaymentWrapper = ({
   amount,
   name,
-  slug,
+  slug,courseId,
 }: {
   amount: number;
   name: string;
   slug: string;
+  courseId: string;
 }) => {
   const [{ isPending }] = usePayPalScriptReducer();
 
+  const {user} = useAppSelector((store: RootState) => store.auth);
+
+  const router = useRouter();
+
   const createOrder = async () => {
+    if (user === null) {
+      router.push("/auth/login");
+    } 
     try {
       const response = await createPaymentOrder({
         amount: amount,
         name: name,
         slug: slug,
+        courseId: courseId,
       });
-
-      // const response = await fetch("http://localhost:5000/payments/pay", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({ amount, name, slug }),
-      // });
       const data = await response.data;
       console.log("data ", data);
       return data.orderID;
@@ -95,14 +99,16 @@ const Payment = ({
   amount,
   name,
   slug,
+  courseId,
 }: {
   amount: number;
   name: string;
   slug: string;
+  courseId: string;
 }) => {
   return (
     <PayPalScriptProvider options={{ clientId: paypalClient! }}>
-      <PaymentWrapper amount={amount} name={name} slug={slug} />
+      <PaymentWrapper amount={amount} name={name} slug={slug} courseId={courseId} />
     </PayPalScriptProvider>
   );
 };
