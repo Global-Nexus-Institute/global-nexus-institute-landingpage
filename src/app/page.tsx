@@ -17,9 +17,6 @@ import Copyright from "@/components/Copyright";
 export default function Home() {
   return (
     <div className=" w-full h-full overflow-x-hidden">
-      <div className="w-full fixed  z-50">
-        <TopMenu />
-      </div>
 
       <header
         className="mt-20 h-[93vh] w-full flex flex-col justify-between items-center bg-cover bg-center bg-no-repeat  overlay bg-gndarkblue"

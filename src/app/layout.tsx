@@ -7,6 +7,7 @@ import Copyright from "@/components/Copyright";
 import Footer from "@/components/Footer";
 import TopMenu from "@/components/navigation/TopMenu";
 import { paypalClient } from "@/shared/constants";
+import { RouteLoader } from "@/components/route-loader/RouteLoader";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -37,6 +38,10 @@ export default function RootLayout({
       >
         <StoreProvider>
           <AntdStyledComponentsProvider>
+            <div className="w-full fixed  z-50">
+              <TopMenu />
+            </div>
+            <RouteLoader />
             {children}
             <Footer />
             <Copyright />
