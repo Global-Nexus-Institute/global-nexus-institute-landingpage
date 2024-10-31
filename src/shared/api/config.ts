@@ -28,4 +28,7 @@ export const endpoints = {
     createOrder: "/payments/create-payment",
     captureOrder: "/payments/capture-payment",
   },
+  payments: {
+    getPaymentStatus: "/payments/get-payment-status",
+  },
 };
