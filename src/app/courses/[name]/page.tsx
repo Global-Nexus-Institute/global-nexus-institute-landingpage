@@ -2,12 +2,13 @@
 import { sampleFeaturedCourses } from "@/shared/data";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Image, Modal } from "antd";
+import { Image, Modal, Spin } from "antd";
 import React, { useEffect, useState } from "react";
 import { paypalClient } from "@/shared/constants";
 import Payment from "@/components/payments/paypal-button/PayPal";
 import { useAppSelector } from "@/lib/store/store.hooks";
 import { RootState } from "@/lib/store/store";
+import { usePayments } from "@/shared/hooks/payments/payments.hooks";
 
 const Course: React.FC = () => {
   const [openModal, setModalOpen] = useState(false);
@@ -19,7 +20,17 @@ const Course: React.FC = () => {
     (course) => course.slug === pathname.split("/")[2],
   );
 
-  const {user} = useAppSelector((store: RootState) => store.auth);
+  const { user } = useAppSelector((store: RootState) => store.auth);
+  const { paymentStatus, loading } = useAppSelector(
+    (store: RootState) => store.payments,
+  );
+  const { getPaymentStatus } = usePayments();
+  useEffect(() => {
+    if (user && details?.uuid) {
+      // load the payment status
+      getPaymentStatus(user._id, details?.uuid);
+    }
+  }, [user, details?.uuid]);
 
   return (
     <>
@@ -29,17 +40,8 @@ const Course: React.FC = () => {
             <div className="space-y-4">
               <h1 className="text-3xl text-white font-bold">{details?.name}</h1>
               <p className="text-sm px-2 text-white">{details?.short_intro}</p>
-              <div className="flex pl-3 space-x-2">
-                <button
-                  className="bg-blue-900 text-white px-3 py-1 rounded-md w-[100px] h-[50px]"
-                  onClick={() => setModalOpen(true)}
-                >
-                  Enroll now
-                </button>
-                <div>
-                  <Payment amount={details?.cost ?? 0} name={details?.name ?? ""} slug={details?.slug ?? ""} courseId={details?.uuid ?? ""} />
-                </div>
-                <div className="flex  items-center justify-center bg-blue-900 text-white px-3 py-1 rounded-md w-[100px] h-[50px]">
+              <div className="flex flex-row items-center pl-3 space-x-2 w-full gap-4 border-2 border-white max-h-[75vh]">
+                <div className="flex col-span-6  items-center justify-center bg-blue-900 text-white px-3 py-1 rounded-md w-[100px] h-[50px]">
                   <Link
                     href={`https://globalnexusinstitute.illumidesk.com/courses/${details?.slug}`}
                     target="_blank"
@@ -47,7 +49,18 @@ const Course: React.FC = () => {
                     Explore
                   </Link>
                 </div>
-
+                <Spin spinning={loading}>
+                  {paymentStatus === null && (
+                    <div className=" bg-blue-900 text-white p-3 w-full overflow-y-scroll ">
+                      <Payment
+                        amount={details?.cost ?? 0}
+                        name={details?.name ?? ""}
+                        slug={details?.slug ?? ""}
+                        courseId={details?.uuid ?? ""}
+                      />
+                    </div>
+                  )}
+                </Spin>
               </div>
             </div>
           </div>
@@ -60,7 +73,6 @@ const Course: React.FC = () => {
           />
         </div>
       </div>
-
     </>
   );
 };
