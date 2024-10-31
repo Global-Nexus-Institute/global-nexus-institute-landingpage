@@ -1,3 +1,4 @@
+"use client";
 import {
   FacebookOutlined,
   LinkedinOutlined,
@@ -7,19 +8,23 @@ import {
 import Link from "next/link";
 import { Image } from "antd";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
+  const router = useRouter();
   return (
     <div className="text-white flex flex-col w-full bg-blue-900/10 mt-10 overflow-x-hidden">
       <footer className="flex flex-col md:h-[300px] w-full mt-1 pt-2">
         <div className="flex flex-col w-full h-full justify-center h-[20%]">
           <div className="md:flex w-full justify-center">
             <div className="flex flex-wrap md:flex-row md:flex  gap-5 w-full md:w-[90%]">
-              <div className="flex md:w-[30%] w-full justify-center items-center mb-1">
+              <div className="flex md:w-[30%] w-full justify-center items-center mb-1 cursor-pointer">
                 <Image
                   src="/assets/images/logo.png"
                   height={120}
                   alt="logo"
+                  preview={false}
+                  onClick={() => router.push("/")}
                   className="bg-gray-500 rounded-sm w-[50%]"
                 />
               </div>
