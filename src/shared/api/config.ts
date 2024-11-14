@@ -1,12 +1,12 @@
 import axios from "axios";
 
-import { baseEndpoint, apiKey } from "../constants";
+import { baseEndpoint } from "../constants";
 
 export const backend = axios.create({
   baseURL: baseEndpoint,
   headers: {
     Accept: "application/json",
-    Authorization: apiKey,
+    // Authorization: apiKey,
   },
 });
 
@@ -23,7 +23,7 @@ export const endpoints = {
     signup: "/auth/signup",
     logout: "/auth/logout",
   },
-  courses: "/courses/",
+  courses: "/courses",
   paypal: {
     createOrder: "/payments/create-payment",
     captureOrder: "/payments/capture-payment",
