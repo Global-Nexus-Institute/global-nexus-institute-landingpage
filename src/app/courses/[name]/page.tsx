@@ -3,15 +3,16 @@ import { sampleFeaturedCourses } from "@/shared/data";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Image, Modal, Spin } from "antd";
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { paypalClient } from "@/shared/constants";
 import Payment from "@/components/payments/paypal-button/PayPal";
-import { useAppSelector } from "@/lib/store/store.hooks";
+import { useAppDispatch, useAppSelector } from "@/lib/store/store.hooks";
 import { RootState } from "@/lib/store/store";
 import { usePayments } from "@/shared/hooks/payments/payments.hooks";
 
 const Course: React.FC = () => {
   const [openModal, setModalOpen] = useState(false);
+  const [refresh, setRefresh] = useState(false);
   const endpoint = process.env.NEXT_PUBLIC_API_ENDPOINT;
   const pathname = usePathname();
   const router = useRouter();
@@ -20,17 +21,24 @@ const Course: React.FC = () => {
     (course) => course.slug === pathname.split("/")[2],
   );
 
+  const dispatch = useAppDispatch();
+
   const { user } = useAppSelector((store: RootState) => store.auth);
-  const { paymentStatus, loading } = useAppSelector(
+  const { paymentStatus, loading, paymentSuccessMessage } = useAppSelector(
     (store: RootState) => store.payments,
   );
+
   const { getPaymentStatus } = usePayments();
   useEffect(() => {
     if (user && details?.uuid) {
       // load the payment status
       getPaymentStatus(user._id, details?.uuid);
     }
-  }, [user, details?.uuid]);
+  }, [user, details?.uuid, refresh ]);
+
+  const handlePayment = () => {
+    setRefresh((prev) => !prev);
+  }
 
   return (
     <>
@@ -50,13 +58,15 @@ const Course: React.FC = () => {
                   </Link>
                 </div>
                 <Spin spinning={loading}>
-                  {paymentStatus === null && (
+                  {user == null || user?.courses?.filter((c) => c.uuid === details?.uuid).length === 0 && (
                     <div className=" bg-blue-900 text-white p-3 w-full overflow-y-scroll ">
                       <Payment
                         amount={details?.cost ?? 0}
                         name={details?.name ?? ""}
                         slug={details?.slug ?? ""}
                         courseId={details?.uuid ?? ""}
+                        student={user}
+                        handlePayment={handlePayment}
                       />
                     </div>
                   )}
