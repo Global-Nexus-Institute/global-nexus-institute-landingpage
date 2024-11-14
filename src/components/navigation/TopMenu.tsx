@@ -36,18 +36,18 @@ const TopMenu: React.FC = () => {
     },
     {
       label: (
-        <a href="#courses" className="text-white">
+        <a href="/#courses" className="text-white">
           Courses
         </a>
       ),
       key: "courses",
     },
     {
-      label: "Consultancy",
-      key: "consultancy",
+      label: "Research",
+      key: "research",
     },
     {
-      label: "Team",
+      label: <Link href={"/#team"}>Team</Link>,
       key: "team",
     },
     {
@@ -79,34 +79,34 @@ const TopMenu: React.FC = () => {
           ),
           icon: <EditOutlined />,
         },
-        {
-          key: "apply3",
-          label: (
-            <Link
-              href={"/apply/course"}
-              onClick={() => {
-                // setTrainingModalOpen(true);
-              }}
-            >
-              Training Application
-            </Link>
-          ),
-          icon: <EditOutlined />,
-        },
-        {
-          key: "apply4",
-          label: (
-            <Link
-              href={"/apply/job"}
-              onClick={() => {
-                // setJobModalOpen(true);
-              }}
-            >
-              Job Application
-            </Link>
-          ),
-          icon: <EditOutlined />,
-        },
+        // {
+        //   key: "apply3",
+        //   label: (
+        //     <Link
+        //       href={"/apply/course"}
+        //       onClick={() => {
+        //         // setTrainingModalOpen(true);
+        //       }}
+        //     >
+        //       Training Application
+        //     </Link>
+        //   ),
+        //   icon: <EditOutlined />,
+        // },
+        // {
+        //   key: "apply4",
+        //   label: (
+        //     <Link
+        //       href={"/apply/job"}
+        //       onClick={() => {
+        //         // setJobModalOpen(true);
+        //       }}
+        //     >
+        //       Job Application
+        //     </Link>
+        //   ),
+        //   icon: <EditOutlined />,
+        // },
       ],
     },
     {
@@ -115,7 +115,7 @@ const TopMenu: React.FC = () => {
       icon: <MoneyCollectFilled />,
     },
     {
-      label: <Link href={"#"}>Contact Us</Link>,
+      label: <Link href={"/#contact"}>Contact Us</Link>,
       key: "contact",
       icon: <PhoneFilled />,
     },
