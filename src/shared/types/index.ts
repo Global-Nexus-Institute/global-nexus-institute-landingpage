@@ -60,3 +60,14 @@ export type UsersDataType = {
   updatedAt: string;
 };
 
+export type PaymentEntityDataType = {
+  _id: string;
+  userId: string;
+  courseId: string;
+  amount: number;
+  currency: string;
+  transactionId: string;
+  paymentStatus: string;
+  createdAt: string;
+};
+
