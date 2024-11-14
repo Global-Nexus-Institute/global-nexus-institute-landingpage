@@ -29,16 +29,17 @@ const Course: React.FC = () => {
   );
 
   const { getPaymentStatus } = usePayments();
+
   useEffect(() => {
     if (user && details?.uuid) {
       // load the payment status
       getPaymentStatus(user._id, details?.uuid);
     }
-  }, [user, details?.uuid, refresh ]);
+  }, [user, details?.uuid, refresh]);
 
   const handlePayment = () => {
     setRefresh((prev) => !prev);
-  }
+  };
 
   return (
     <>
@@ -48,7 +49,7 @@ const Course: React.FC = () => {
             <div className="space-y-4">
               <h1 className="text-3xl text-white font-bold">{details?.name}</h1>
               <p className="text-sm px-2 text-white">{details?.short_intro}</p>
-              <div className="flex flex-row items-center pl-3 space-x-2 w-full gap-4 border-2 border-white max-h-[75vh]">
+              <div className="flex flex-row items-center pl-3 space-x-2 w-full gap-4 max-h-[75vh]">
                 <div className="flex col-span-6  items-center justify-center bg-blue-900 text-white px-3 py-1 rounded-md w-[100px] h-[50px]">
                   <Link
                     href={`https://globalnexusinstitute.illumidesk.com/courses/${details?.slug}`}
@@ -58,7 +59,16 @@ const Course: React.FC = () => {
                   </Link>
                 </div>
                 <Spin spinning={loading}>
-                  {user == null || user?.courses?.filter((c) => c.uuid === details?.uuid).length === 0 && (
+                  {user == null ? (
+                    <div
+                      className="flex col-span-6  items-center justify-center bg-blue-900 text-white px-3 py-1 rounded-md w-[100px] h-[50px] cursor-pointer"
+                      onClick={() => router.push("/auth/login")}
+                    >
+                      Buy Now
+                    </div>
+                  ) : paymentStatus !== null ? (
+                    <div></div>
+                  ) : (
                     <div className=" bg-blue-900 text-white p-3 w-full overflow-y-scroll ">
                       <Payment
                         amount={details?.cost ?? 0}

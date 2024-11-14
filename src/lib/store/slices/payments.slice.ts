@@ -1,4 +1,8 @@
-import { getPaymentStatus, createPaymentOrder, executePaymentOrder } from "@/shared/api/payments/paypal.api";
+import {
+  getPaymentStatus,
+  createPaymentOrder,
+  executePaymentOrder,
+} from "@/shared/api/payments/paypal.api";
 import { PaymentEntityDataType } from "@/shared/types";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
@@ -21,7 +25,19 @@ const initialState: PaymentState = {
 // create payment
 export const createPaymentThunk = createAsyncThunk(
   "payments/createPayment",
-  async ({ amount, name, slug, courseId, userId }: { amount: number; name: string; slug: string; courseId: string, userId: string | null }) => {
+  async ({
+    amount,
+    name,
+    slug,
+    courseId,
+    userId,
+  }: {
+    amount: number;
+    name: string;
+    slug: string;
+    courseId: string;
+    userId: string | null;
+  }) => {
     try {
       const res = await createPaymentOrder({
         amount: amount,
@@ -36,12 +52,20 @@ export const createPaymentThunk = createAsyncThunk(
       return err.response.data ?? err.response.error;
     }
   },
-)
+);
 
 // execute payment
 export const executePaymentThunk = createAsyncThunk(
   "payments/executePayment",
-  async ({ paymentID, payerID, orderID }: { paymentID: string; payerID: string | null, orderID: string }) => {
+  async ({
+    paymentID,
+    payerID,
+    orderID,
+  }: {
+    paymentID: string;
+    payerID: string | null;
+    orderID: string;
+  }) => {
     try {
       const res = await executePaymentOrder({
         paymentID: paymentID,
@@ -54,7 +78,7 @@ export const executePaymentThunk = createAsyncThunk(
       return err.response.data ?? err.response.error;
     }
   },
-)
+);
 
 export const getPaymentStatusThunk = createAsyncThunk(
   "payments/getPaymentStatus",
@@ -86,31 +110,34 @@ const paymentSlice = createSlice({
       })
       .addCase(getPaymentStatusThunk.fulfilled, (state, action) => {
         state.loading = false;
-        state.data = action.payload ?? action.payload.data;
-        state.paymentSuccessMessage = action.payload.message ?? "Payment retrieved!";
+        state.data = action.payload;
+        state.paymentStatus = action.payload.paymentStatus;
+        state.paymentSuccessMessage =
+          action.payload.message ?? "Payment retrieved!";
       })
       .addCase(getPaymentStatusThunk.rejected, (state) => {
         state.loading = false;
         state.data = null;
       });
 
-      // execute payment
-      builder
+    // execute payment
+    builder
       .addCase(executePaymentThunk.pending, (state) => {
         state.loading = true;
       })
       .addCase(executePaymentThunk.fulfilled, (state, action) => {
         state.loading = false;
         state.data = action.payload ?? action.payload.data;
-        state.paymentSuccessMessage = action.payload.message ?? "Payment successful!";
+        state.paymentSuccessMessage =
+          action.payload.message ?? "Payment successful!";
       })
       .addCase(executePaymentThunk.rejected, (state) => {
         state.loading = false;
         state.data = null;
       });
 
-      // create payment
-      builder
+    // create payment
+    builder
       .addCase(createPaymentThunk.pending, (state) => {
         state.loading = true;
       })
@@ -123,10 +150,10 @@ const paymentSlice = createSlice({
         state.loading = false;
         state.data = null;
         state.paymentErrorMessage = action.error.message ?? "Payment failed!";
-      })
+      });
   },
 });
 
-export const {resetMessages} = paymentSlice.actions;
+export const { resetMessages } = paymentSlice.actions;
 
 export default paymentSlice.reducer;
