@@ -88,7 +88,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="h-[25%] px-5 flex justify-center space-x-3 text-gndarkblue text-md font-bold items-center gap-3 overflow-x-auto">
+          <div id="contact" className="h-[25%] px-5 flex justify-center space-x-3 text-gndarkblue text-md font-bold items-center gap-3 overflow-x-auto">
             <div className="flex p-1 text-white text-xs md:text-sm max-w-full">
               Email: info@globalnexus.co.rw
             </div>
