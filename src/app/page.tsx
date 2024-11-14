@@ -127,7 +127,7 @@ export default function Home() {
         </section>
 
         {/* Team section */}
-        <section className="max-h-[800px] overflow-y-scroll scrollbar-hidden">
+        <section id="team" className="max-h-[800px] overflow-y-scroll scrollbar-hidden">
           <div className="flex flex-col items-center" id="team">
             <h1 className="text-center text-gnblueLight text-4xl my-10">
               Our Team
