@@ -39,7 +39,11 @@ const courseSlice = createSlice({
       })
       .addCase(getCoursesThunk.fulfilled, (state, action) => {
         state.loading = false;
-        state.courses = action.payload.results;
+        if (action.payload.error) {
+          state.courseErrorMessage = action.payload.error;
+        } else {
+          state.courses = action.payload;
+        }
       })
       .addCase(getCoursesThunk.rejected, (state) => {
         state.loading = false;
