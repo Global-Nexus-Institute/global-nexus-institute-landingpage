@@ -10,29 +10,33 @@ import {
   PayPalScriptProvider,
   usePayPalScriptReducer,
 } from "@paypal/react-paypal-js";
-import { useAppSelector } from "@/lib/store/store.hooks";
+import { useAppDispatch, useAppSelector } from "@/lib/store/store.hooks";
 import { RootState } from "@/lib/store/store";
 import { useRouter } from "next/navigation";
+import { resetMessages } from "@/lib/store/slices/payments.slice";
+import { UsersDataType } from "@/shared/types";
 
 const PaymentWrapper = ({
   amount,
   name,
   slug,
   courseId,
+  student,
+  handlePayment,
 }: {
   amount: number;
   name: string;
   slug: string;
   courseId: string;
+  student: UsersDataType | null;
+  handlePayment: () => void;
 }) => {
   const [{ isPending }] = usePayPalScriptReducer();
-
-  const { user } = useAppSelector((store: RootState) => store.auth);
-
   const router = useRouter();
+  const dispatch = useAppDispatch();
 
   const createOrder = async () => {
-    if (user === null) {
+    if (student === null) {
       router.push("/auth/login");
     }
     try {
@@ -41,7 +45,7 @@ const PaymentWrapper = ({
         name: name,
         slug: slug,
         courseId: courseId,
-        userId: user?._id ?? null,
+        userId: student?._id ?? null,
       });
       const data = await response.data;
       console.log("data ", data);
@@ -59,12 +63,11 @@ const PaymentWrapper = ({
   };
 
   const onApprove = async (data: any) => {
-
     if (data.orderID) {
       try {
         const response = await executePaymentOrder({
           paymentID: data.paymentID,
-          payerID: user?._id ?? null,
+          payerID: student?._id ?? null,
           orderID: data.orderID,
         });
         // const response = await fetch(
@@ -82,8 +85,9 @@ const PaymentWrapper = ({
         // );
         console.log("response ", response);
         const results = await response.data;
-        if (results.status === "Payment success") {
-          alert("Payment successful!");
+
+        if (results.status === "COMPLETED") {
+          handlePayment();
           // save to database
         }
       } catch (err) {
@@ -110,11 +114,15 @@ const Payment = ({
   name,
   slug,
   courseId,
+  student,
+  handlePayment,
 }: {
   amount: number;
   name: string;
   slug: string;
   courseId: string;
+  student: UsersDataType | null;
+  handlePayment: () => void;
 }) => {
   return (
     <PayPalScriptProvider options={{ clientId: paypalClient! }}>
@@ -123,6 +131,8 @@ const Payment = ({
         name={name}
         slug={slug}
         courseId={courseId}
+        student={student}
+        handlePayment={handlePayment}
       />
     </PayPalScriptProvider>
   );
