@@ -43,7 +43,7 @@ const TopMenu: React.FC = () => {
       key: "courses",
     },
     {
-      label: "Research",
+      label: <Link href={"/research"}>Research</Link>,
       key: "research",
     },
     {
