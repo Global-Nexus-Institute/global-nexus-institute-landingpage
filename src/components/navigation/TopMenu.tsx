@@ -110,7 +110,7 @@ const TopMenu: React.FC = () => {
       ],
     },
     {
-      label: "Donate",
+      label: <Link href={"/donate"}>Donate</Link>,
       key: "donate",
       icon: <MoneyCollectFilled />,
     },
