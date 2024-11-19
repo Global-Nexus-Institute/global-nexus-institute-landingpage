@@ -9,7 +9,7 @@ export default function DonatePage() {
     {
       title: "",
       content:
-        "  Provide scholarships for talented but underprivileged students.",
+        "Provide scholarships for talented but underprivileged students.",
     },
     {
       title: "",
@@ -100,11 +100,11 @@ export default function DonatePage() {
             <div className="h-16 text-[1.3em]  flex justify-center items-center p-4 bg-orange-900 text-white font-bold">
               <button>Custom Amount</button>
             </div>
-          </div>
-          <div className="flex justify-center items-center my-5">
-            <button className="bg-orange-900 text-[1.3em] text-white font-bold p-4 capitalize">
-              Donate Now
-            </button>
+            <div className="h-16 text-[1.3em]  flex justify-center items-center p-4 bg-orange-900 text-white font-bold">
+              <button className="bg-orange-900 text-[1.3em] text-white font-bold p-4 capitalize">
+                Donate Now
+              </button>
+            </div>
           </div>
         </section>
       </div>
