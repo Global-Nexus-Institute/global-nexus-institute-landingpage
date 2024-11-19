@@ -1,42 +1,73 @@
 "use client";
 import React from "react";
 import "../research/research.css";
+import { List } from "antd";
+import { CheckOutlined } from "@ant-design/icons";
 
 export default function DonatePage() {
+  const listItems = [
+    {
+      title: "",
+      content:
+        "  Provide scholarships for talented but underprivileged students.",
+    },
+    {
+      title: "",
+      content:
+        "Support the creation of state-of-the-art learning environments.",
+    },
+    {
+      title: "",
+      content:
+        "Help us offer certifications from global institutions, like NCC (UK)",
+    },
+    {
+      title: "",
+      content:
+        "Every contribution, big or small, helps us build a brighter future for our students",
+    },
+  ];
   return (
     <div className="mt-10 researh-body flex flex-col items-center justify-center">
       <header className="mt-20 font-bold w-full">
-        <h1>Support Global Nexus Institute</h1>
+        <h1>Global Nexus Institute - Donate Now</h1>
       </header>
       <div className="research-container">
         <section>
           <h2 className="text-[2.5em] font-bold">
-            About the Funding Global Nexus Institute
+            Empowering Communities Through Tech Education
           </h2>
           <p className="text-[1.5em] text-white">
-            First Fund (GNI), in collaboration with AlX, RDB,  NCC Education, Sand Technologiews and ICT Chamber, proudly
-            presents the Heroes of Education Financial Assistantship (HEFA) for
-            students who are tackling problems, including food insecurity, in
-            their communities. Each year, GNI honors individuals and
-            organizations with the Heroes of Education designation for their
-            remarkable contributions to advancing education. It is in
-            recognition to these people that GNI offers these awards.
+            Global Nexus Institute is committed to providing accessible,
+            high-quality training in Data Science, Artificial Intelligence,
+            Cyber-Security, and essential digital skills. Your contribution will
+            help us empower underrepresented groups, including women, young
+            mothers, and people with disabilities, to thrive in the digital
+            economy.
           </p>
         </section>
 
         <section>
-          <h2 className="text-[2.5em] font-bold">Background</h2>
-          <p className="text-[1.5em] text-white">
-            The GNI has been empowering talented and driven individuals through
-            scholarships, enabling them to deepen their knowledge and make a
-            significant impact within their communities and organizations. In
-            partnership with AlX, RDB,  NCC Education, Sand Technologiews and ICT Chamber in , Rwanda, GNI has assisted
-            25 qualified applicants who aspire to pursue an MSc in Food Systems
-            and Sustainable Agriculture (FSSA). Since AlX, RDB,  NCC Education, Sand Technologiews and ICT Chamber offers
-            tuition-free programs, selected candidates will receive support for
-            their application or annual administrative fees. We want to support
-            more students, so we invite you to donate to this cause.
-          </p>
+          <h2 className="text-[2.5em] font-bold">Why Donate?</h2>
+          <List
+            itemLayout="vertical"
+            size="small"
+            dataSource={listItems}
+            renderItem={(item) => (
+              <List.Item key={item.title}>
+                <List.Item.Meta
+                  avatar={
+                    <CheckOutlined
+                      style={{ color: "#2EB9C2", fontSize: "1.5em" }}
+                    />
+                  }
+                  description={
+                    <p className="text-[1.5em] text-white">{item.content}</p>
+                  }
+                />
+              </List.Item>
+            )}
+          />
         </section>
 
         <section className="flex flex-col w-[100%]">
@@ -62,9 +93,6 @@ export default function DonatePage() {
             </div>
             <div className="flex justify-center items-center h-16 text-[1.3em]   p-4 bg-orange-900 text-white font-bold">
               <button>$250.00</button>
-            </div>
-            <div className="h-16 text-[1.3em]   flex justify-center items-center p-4 bg-orange-900 text-white font-bold">
-              <button>Default Amount</button>
             </div>
             <div className="h-16 text-[1.3em]   flex justify-center items-center p-4 bg-orange-900 text-white font-bold">
               <button>$1000.00</button>
