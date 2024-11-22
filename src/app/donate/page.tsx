@@ -55,16 +55,12 @@ export default function DonatePage() {
             dataSource={listItems}
             renderItem={(item) => (
               <List.Item key={item.title}>
-                <List.Item.Meta
-                  avatar={
-                    <CheckOutlined
-                      style={{ color: "#2EB9C2", fontSize: "1.5em" }}
-                    />
-                  }
-                  description={
-                    <p className="text-[1.5em] text-white">{item.content}</p>
-                  }
-                />
+                <span className="text-[1.5em] text-white">
+                  <CheckOutlined
+                    style={{ color: "#2EB9C2", fontSize: "1em" }}
+                  />{" "}
+                  {item.content}
+                </span>
               </List.Item>
             )}
           />
@@ -101,7 +97,7 @@ export default function DonatePage() {
               <button>Custom Amount</button>
             </div>
             <div className="h-16 text-[1.3em]  flex justify-center items-center p-4 bg-orange-900 text-white font-bold">
-              <button className="bg-orange-900 text-[1.3em] text-white font-bold p-4 capitalize">
+              <button className="capitalize">
                 Donate Now
               </button>
             </div>

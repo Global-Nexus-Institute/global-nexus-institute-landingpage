@@ -114,17 +114,15 @@ export default function ResearchPage() {
             dataSource={listItems}
             renderItem={(item) => (
               <List.Item key={item.title}>
-                <List.Item.Meta
-                  title={
-                    <span className="font-bold text-[1.5em] text-white">
-                      {item.title}
-                    </span>
-                  }
-                  avatar={<CheckOutlined style={{ color: "#2EB9C2", fontSize: "1.5em"  }} />}
-                  description={
-                    <p className="text-[1.3em] text-white">{item.content}</p>
-                  }
-                />
+                <h3 className="font-bold text-[1.5em] text-white">
+                  <span>
+                    <CheckOutlined
+                      style={{ color: "#2EB9C2", fontSize: "1em" }}
+                    />
+                  </span>{" "}
+                  {item.title}
+                </h3>
+                <p className="text-[1.3em] indent-1 text-white">{item.content}</p>
               </List.Item>
             )}
           />
