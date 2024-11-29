@@ -40,7 +40,7 @@ export const getCourseThunk = createAsyncThunk(
       return err.response.data ?? err.response.message;
     }
   },
-)
+);
 
 const courseSlice = createSlice({
   name: "courses",
@@ -63,8 +63,8 @@ const courseSlice = createSlice({
         state.loading = false;
       });
 
-      // get course
-      builder
+    // get course
+    builder
       .addCase(getCourseThunk.pending, (state) => {
         state.loading = true;
       })
@@ -73,7 +73,8 @@ const courseSlice = createSlice({
         if (action.payload.error) {
           state.courseErrorMessage = action.payload.error;
         } else {
-          state.courseDetail = action.payload;
+          // console.log("Found course: ", action.payload.course);
+          state.courseDetail = action.payload.course;
         }
       })
       .addCase(getCourseThunk.rejected, (state) => {
