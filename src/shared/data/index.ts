@@ -234,6 +234,12 @@ export const sampleSponsorPartners: SponsorsPartners[] = [
     content:
       "The ICT Chamber in Rwanda is a member-based organization focused on advancing (ICT) sector.",
   },
+  {
+    title: "OSiri University",
+    imageUrl: "/assets/images/ositiuniversity.jpg",
+    content:
+      "Tuition free University that blends Africa philosophy and western education",
+  },
 ];
 
 export const testimonials = [
