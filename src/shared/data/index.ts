@@ -236,7 +236,7 @@ export const sampleSponsorPartners: SponsorsPartners[] = [
   },
   {
     title: "Osiri University",
-    imageUrl: "/assets/images/ositiuniversity.jpg",
+    imageUrl: "/assets/images/ositiuniversity.png",
     content:
       "Tuition free University that blends Africa philosophy and western education",
   },
