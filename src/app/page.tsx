@@ -1,18 +1,11 @@
 "use client";
-import TopMenu from "@/components/navigation/TopMenu";
 import CourseContainer from "@/components/courses/CourseContainer";
-import { Button, Carousel, Image } from "antd";
+import {  Carousel, Image } from "antd";
 import { carouselData, teamMembers } from "@/shared/data";
 import { IntroCard } from "@/components/content/intro/IntroCard";
-import Link from "next/link";
+
 import { SponsorsPartners } from "@/components/content/sponsors-partners/SponsorsPartners";
-import {
-  FacebookOutlined,
-  InstagramFilled,
-  LinkedinOutlined,
-  XOutlined,
-} from "@ant-design/icons";
-import Copyright from "@/components/Copyright";
+
 
 export default function Home() {
   return (
@@ -168,7 +161,7 @@ export default function Home() {
               <div
                 className="flex flex-col pt-2 items-center w-[80%] md:w-[45%] h-auto md:h-full bg-gnpinkdark bg-image overlay"
                 style={{
-                  backgroundImage: `url(https://globalnexus.co.rw/images/hero_1.jpg)`,
+                  backgroundImage: `url(https://dda.co.rw/images/hero_1.jpg)`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundAttachment: "fixed",
@@ -177,7 +170,7 @@ export default function Home() {
               >
                 <div className="w-[100px] h-[100px] rounded-full mb-2">
                   <Image
-                    src="https://globalnexus.co.rw/images/samuelson.jpg"
+                    src="https://dda.co.rw/images/samuelson.jpg"
                     alt="t2"
                     className="w-[60px] h-[60px] rounded-full"
                   />
@@ -193,7 +186,7 @@ export default function Home() {
               <div
                 className="flex flex-col pt-2 items-center w-full md:w-[45%] h-auto md:h-full bg-gnpinkdark bg-image overlay"
                 style={{
-                  backgroundImage: `url(https://globalnexus.co.rw/images/hero_1.jpg)`,
+                  backgroundImage: `url(https://dda.co.rw/images/hero_1.jpg)`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundAttachment: "fixed",
@@ -202,7 +195,7 @@ export default function Home() {
               >
                 <div className="w-[100px] h-[100px] rounded-full mb-2">
                   <Image
-                    src="https://globalnexus.co.rw/images/ndamije.png"
+                    src="https://dda.co.rw/images/ndamije.png"
                     alt="t2"
                     className="w-[60px] h-[60px] rounded-full"
                   />
@@ -219,7 +212,7 @@ export default function Home() {
               {/* <div
               className="flex flex-col pt-2 items-center w-[60%] md:w-[30%] h-auto md:h-full bg-gnpinkdark bg-image overlay"
               style={{
-                backgroundImage: `url(https://globalnexus.co.rw/images/hero_1.jpg)`,
+                backgroundImage: `url(https://dda.co.rw/images/hero_1.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundAttachment: "fixed",
@@ -229,7 +222,7 @@ export default function Home() {
               <div>Person 3</div>
               <div className="w-[100px] h-[100px] rounded-full">
                 <Image
-                  src="https://globalnexus.co.rw/images/samuelson.jpg"
+                  src="https://dda.co.rw/images/samuelson.jpg"
                   alt="t2"
                   className="w-[60px] h-[60px] rounded-full"
                 />

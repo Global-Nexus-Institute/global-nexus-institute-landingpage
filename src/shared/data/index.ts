@@ -4,7 +4,7 @@ export const teamMembers: TeamMembers[] = [
   {
     names: "Theoneste NDAYISENGA",
     title: "Founder & CEO",
-    profileImage: "https://globalnexus.co.rw/images/Theoneste.png",
+    profileImage: "https://dda.co.rw/images/Theoneste.png",
   },
   {
     names: "Francis Kipchoge Yego",
@@ -14,32 +14,32 @@ export const teamMembers: TeamMembers[] = [
   {
     names: "Vedaste NYANDWI",
     title: "Data Science Instructor",
-    profileImage: "https://globalnexus.co.rw/images/vedaste.png",
+    profileImage: "https://dda.co.rw/images/vedaste.png",
   },
   {
     names: "Geredi NIYIBIZI",
     title: "AI Instructor",
-    profileImage: "	https://globalnexus.co.rw/images/gEREDI.png",
+    profileImage: "	https://dda.co.rw/images/gEREDI.png",
   },
   {
     names: "Dr. Innocent NGARUYE",
     title: "Sr. Data Science Instructor",
-    profileImage: "	https://globalnexus.co.rw/images/innocent.png",
+    profileImage: "	https://dda.co.rw/images/innocent.png",
   },
   {
     names: "Denyse UWITONZE",
     title: "Students Support",
-    profileImage: "	https://globalnexus.co.rw/images/denyse1.png",
+    profileImage: "	https://dda.co.rw/images/denyse1.png",
   },
   {
     names: "Joie Sophia UMUHOZA",
     title: "Marketing Officer",
-    profileImage: "	https://globalnexus.co.rw/images/Joiejosepha.jpeg",
+    profileImage: "	https://dda.co.rw/images/Joiejosepha.jpeg",
   },
   {
     names: "Didier Ngamije",
     title: "Data Analytics Instructor",
-    profileImage: "https://globalnexus.co.rw/images/ndamije.png",
+    profileImage: "https://dda.co.rw/images/ndamije.png",
   },
 ];
 
@@ -224,7 +224,7 @@ export const sampleSponsorPartners: SponsorsPartners[] = [
   },
   {
     title: "NCC Education",
-    imageUrl: "https://globalnexus.co.rw/images/Hello.png",
+    imageUrl: "https://dda.co.rw/images/Hello.png",
     content:
       "NCC Education is a UK-based awarding body that provides internationally recognized qualifications",
   },
