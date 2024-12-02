@@ -235,7 +235,7 @@ export const sampleSponsorPartners: SponsorsPartners[] = [
       "The ICT Chamber in Rwanda is a member-based organization focused on advancing (ICT) sector.",
   },
   {
-    title: "OSiri University",
+    title: "Osiri University",
     imageUrl: "/assets/images/ositiuniversity.jpg",
     content:
       "Tuition free University that blends Africa philosophy and western education",
