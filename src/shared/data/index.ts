@@ -12,29 +12,29 @@ export const teamMembers: TeamMembers[] = [
     profileImage: "/assets/images/francis.jpg",
   },
   {
-    names: "Vedaste NYANDWI",
-    title: "Data Science Instructor",
-    profileImage: "https://dda.co.rw/images/vedaste.png",
+    names: "Grace Umuhire",
+    title: "Director Of Funding and Partnership",
+    profileImage: "/assets/images/director.jpg",
   },
   {
     names: "Geredi NIYIBIZI",
     title: "AI Instructor",
-    profileImage: "	https://dda.co.rw/images/gEREDI.png",
+    profileImage: "https://dda.co.rw/images/gEREDI.png",
   },
   {
     names: "Dr. Innocent NGARUYE",
     title: "Sr. Data Science Instructor",
-    profileImage: "	https://dda.co.rw/images/innocent.png",
+    profileImage: "https://dda.co.rw/images/innocent.png",
   },
   {
     names: "Denyse UWITONZE",
     title: "Students Support",
-    profileImage: "	https://dda.co.rw/images/denyse1.png",
+    profileImage: "https://dda.co.rw/images/denyse1.png",
   },
   {
     names: "Joie Sophia UMUHOZA",
     title: "Marketing Officer",
-    profileImage: "	https://dda.co.rw/images/Joiejosepha.jpeg",
+    profileImage: "https://dda.co.rw/images/Joiejosepha.jpeg",
   },
   {
     names: "Didier Ngamije",
